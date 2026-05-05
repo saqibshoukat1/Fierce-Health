@@ -11,4 +11,4 @@ app.get('*', (c) => {
   return c.html('index.html')
 })
 
-export default app
+module.exports = app
