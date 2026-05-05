@@ -1,0 +1,2566 @@
+WEBVTT
+
+1
+00:01:30.910 --> 00:01:32.039
+Zaki Mahomed: I'm a Lego.
+
+2
+00:01:32.450 --> 00:01:33.180
+Jon Matzner: What up?
+
+3
+00:01:34.040 --> 00:01:35.319
+Zaki Mahomed: Hey, how's it going?
+
+4
+00:01:35.320 --> 00:01:36.060
+Jon Matzner: Good, how are you?
+
+5
+00:01:36.770 --> 00:01:40.330
+Zaki Mahomed: I'm good. They're just floating into the waiting room.
+
+6
+00:01:40.450 --> 00:01:40.990
+Jon Matzner: Cool.
+
+7
+00:01:41.370 --> 00:01:47.950
+Zaki Mahomed: So I'm using that time to get Claude running on 4 projects, including the ones from yesterday, like Dawn's builds and the new…
+
+8
+00:01:48.060 --> 00:01:53.050
+Zaki Mahomed: Andrew builds. It's cool, like, how, like, fast it is.
+
+9
+00:01:53.370 --> 00:02:04.490
+Jon Matzner: I'm not worried about any of the old stuff, because that was us experimenting. Like, you know, oh, Sarah miscommunicate, like, we're… from this point forward, we're gonna be so tight that it's just like, I'm not even worried about it now.
+
+10
+00:02:04.490 --> 00:02:05.539
+Zaki Mahomed: We'll talk about it after, Linda.
+
+11
+00:02:05.540 --> 00:02:05.870
+Jon Matzner: Yeah.
+
+12
+00:02:05.870 --> 00:02:07.399
+Zaki Mahomed: Yeah, I have some ideas, too.
+
+13
+00:02:18.120 --> 00:02:21.450
+Jon Matzner: He's like, you wanna boot that Fireflies? Fireflies creeps me out.
+
+14
+00:02:22.970 --> 00:02:24.990
+Jon Matzner: We can send him a recording if you want, I just don't like that.
+
+15
+00:02:28.110 --> 00:02:29.200
+Chandler Woodward: What's that?
+
+16
+00:02:30.240 --> 00:02:31.070
+Jon Matzner: Hey, Chandler.
+
+17
+00:02:31.590 --> 00:02:32.619
+Chandler Woodward: How you guys doing?
+
+18
+00:02:32.620 --> 00:02:33.519
+Jon Matzner: Good, how are you?
+
+19
+00:02:33.720 --> 00:02:35.839
+Chandler Woodward: Doing good. Yeah, hey Raphael, how are you?
+
+20
+00:02:35.840 --> 00:02:36.360
+Jon Matzner: you.
+
+21
+00:02:37.120 --> 00:02:37.890
+Zaki Mahomed: Woohoo.
+
+22
+00:02:40.240 --> 00:02:41.210
+Jon Matzner: Hey, there you are.
+
+23
+00:02:41.620 --> 00:02:42.409
+Jon Matzner: How's it going?
+
+24
+00:02:45.950 --> 00:02:47.009
+Jon Matzner: Can you hear us?
+
+25
+00:02:48.020 --> 00:02:48.990
+Rafaela Mae Galupo: Yep, I'm…
+
+26
+00:02:48.990 --> 00:02:49.550
+Jon Matzner: Okay.
+
+27
+00:02:50.170 --> 00:02:51.679
+Rafaela Mae Galupo: Pulling Raleigh in.
+
+28
+00:02:51.880 --> 00:02:52.900
+Jon Matzner: Cool.
+
+29
+00:03:23.760 --> 00:03:25.539
+Zaki Mahomed: Alright, I think he's here. There we go.
+
+30
+00:03:34.100 --> 00:03:35.530
+Raleigh Williams: Hey, what's up, man?
+
+31
+00:03:35.530 --> 00:03:36.529
+Jon Matzner: What's up, Raleigh? How's it going?
+
+32
+00:03:36.530 --> 00:03:43.840
+Raleigh Williams: Oh, sorry, dude, I was in, like, a John Matzner personal Zoom room for some reason. Whatever.
+
+33
+00:03:43.840 --> 00:03:45.260
+Jon Matzner: Thanks, or whatever. How's it going?
+
+34
+00:03:45.260 --> 00:03:47.689
+Raleigh Williams: you know, Doing good, how you doing?
+
+35
+00:03:47.930 --> 00:03:49.000
+Jon Matzner: Good, man.
+
+36
+00:03:49.210 --> 00:03:52.560
+Jon Matzner: I always, I always identify with you because,
+
+37
+00:03:53.030 --> 00:04:06.670
+Jon Matzner: you ran a trampoline business, and now you're running a way better business. I feel like… I see my own story, which is like, I did business on hard mode, and now it's like, yeah, we do, like, GLPs via mail. I was like, yes, excellent choice.
+
+38
+00:04:07.000 --> 00:04:13.730
+Raleigh Williams: The trampoline park business freaking sucks, I freaking… it was the worst freaking… on Twitter, at least back in the day, people.
+
+39
+00:04:13.730 --> 00:04:14.600
+Jon Matzner: Home Improvement?
+
+40
+00:04:14.600 --> 00:04:15.300
+Raleigh Williams: Because, I don'.
+
+41
+00:04:15.300 --> 00:04:16.550
+Jon Matzner: No, no, home improvement.
+
+42
+00:04:16.730 --> 00:04:19.390
+Raleigh Williams: Yeah, that's bad. That's a bad one. That's bad.
+
+43
+00:04:19.689 --> 00:04:24.379
+Jon Matzner: A home improvement. Although, like, being nervous about a kid breaking their spine…
+
+44
+00:04:25.130 --> 00:04:30.539
+Raleigh Williams: Yes! You learn to sleep at night, which may not be the best thing, you know what I mean?
+
+45
+00:04:30.850 --> 00:04:33.889
+Jon Matzner: Yeah, but cool, so we'll jump right into it.
+
+46
+00:04:33.890 --> 00:04:34.459
+Raleigh Williams: Yeah, exactly.
+
+47
+00:04:34.460 --> 00:04:54.310
+Jon Matzner: We'll do most of the heavy lifting, because we'll definitely need some time. So, real quick. So, at the core of Sagan is really leverage, not global talent. Global talent is a part of leverage, a huge part of the toolkit. Obviously, code is a big part of it, too. We started… I mean, we're saving hundreds and hundreds and hundreds of thousands of dollars a month right now in payroll.
+
+48
+00:04:54.460 --> 00:05:09.440
+Jon Matzner: Via our use of AI agents, and I can, you know, give some examples if you need to see any, but, we are building agents like crazy for our members. Zucky is our head of AI, I'll let him walk through his whole thing, but the idea here is we want to Costco it as well.
+
+49
+00:05:09.550 --> 00:05:15.270
+Jon Matzner: So you guys can either use a credit, Or, 500 bucks.
+
+50
+00:05:15.320 --> 00:05:33.540
+Jon Matzner: That's it, and then everything else is usage-based. So the idea here is that I want to make money on the membership and retaining you guys, even if you're not hiring, and for you guys, you don't get hit up for a $20,000 fee from some bullshit Zapier consultant who… So the idea here is that this is not, like, locking in seats and all that stuff, so the idea here is to find
+
+51
+00:05:34.490 --> 00:05:46.559
+Jon Matzner: we call them Legos, like, one LEGO. We can build a whole city, but the kind of name of the game in this call is gonna be Find One Lego brick, and if this works and you guys like it, we'll build a million frickin' Legos. Like, we.
+
+52
+00:05:46.560 --> 00:05:46.950
+Raleigh Williams: Awesome.
+
+53
+00:05:46.950 --> 00:05:51.590
+Jon Matzner: But it's supposed to be kind of, like, lightweight, it's not like, oh, I gotta get, like, board approval, because it's…
+
+54
+00:05:51.590 --> 00:05:52.040
+Raleigh Williams: Sure.
+
+55
+00:05:52.040 --> 00:05:58.850
+Jon Matzner: $45,000 in an annual contract, it's like, man, this is… even if it doesn't work, it's 500 bucks, who cares? Yeah, totally.
+
+56
+00:05:58.850 --> 00:05:59.550
+Raleigh Williams: Cool.
+
+57
+00:05:59.550 --> 00:06:01.770
+Jon Matzner: So, just to give you comp… is that a good, good intro?
+
+58
+00:06:02.820 --> 00:06:09.129
+Raleigh Williams: Yeah, let me make sure I… so I have Chandler that's, and he may have been on your same personal meeting room, so I just sent him a Zoom link.
+
+59
+00:06:09.130 --> 00:06:10.799
+Chandler Woodward: No, I'm here. Oh, you are?
+
+60
+00:06:10.800 --> 00:06:11.410
+Jon Matzner: Let me hear him.
+
+61
+00:06:11.410 --> 00:06:14.919
+Raleigh Williams: Okay, and is Raffaella here as well, somewhere in the ether?
+
+62
+00:06:15.100 --> 00:06:16.929
+Zaki Mahomed: Yes.
+
+63
+00:06:16.930 --> 00:06:17.910
+Rafaela Mae Galupo: I'm here.
+
+64
+00:06:17.910 --> 00:06:20.490
+Jon Matzner: Is Jesus in the room right now?
+
+65
+00:06:20.490 --> 00:06:22.400
+Raleigh Williams: This is always everywhere, and Raffaella is…
+
+66
+00:06:22.790 --> 00:06:27.689
+Raleigh Williams: Raphaela is our Jesus, in a non-blasphe… She's with us right now. In a non-blaspheming way.
+
+67
+00:06:27.690 --> 00:06:28.730
+Jon Matzner: Make yourself known.
+
+68
+00:06:30.640 --> 00:06:32.619
+Jon Matzner: Okay, Zucky, off to you, because you'll do most of.
+
+69
+00:06:32.620 --> 00:06:40.749
+Zaki Mahomed: All right, let's do it. Hi folks, good to meet you guys, thanks for that intro, John. Really appreciate it. Let's jump in. I reviewed your…
+
+70
+00:06:40.750 --> 00:06:54.169
+Zaki Mahomed: answers in the intake form, and so now, having done a few of these sessions, I like to spot patterns. I think we'll have to really dive in, and my goal would be in this call, and I'd leave a really happy person at the end of this call if I can identify, like.
+
+71
+00:06:54.230 --> 00:07:12.940
+Zaki Mahomed: one small, scoped-down, high-impact, solvable problem with these agents. So, as John mentioned, you know, a big part of what we're going to do is scope it down to a single LEGO brick, right? And so with that, you know, I know that you guys flag general organizational
+
+72
+00:07:12.940 --> 00:07:15.670
+Zaki Mahomed: stuff like sync.
+
+73
+00:07:15.670 --> 00:07:34.749
+Zaki Mahomed: as a core focus, but with this additional context, and I'm happy to give you guys more examples if you, like, point me in the right direction internally, right, where you think you need more support, I can give you more examples too. I'd love to just start by broadly identifying, like, a couple of big rocks that we can call problems that need further investigation, and then
+
+74
+00:07:34.750 --> 00:07:40.100
+Zaki Mahomed: If anything interesting pops up in this conversation that already is popping your minds on agents that you think we should build.
+
+75
+00:07:40.100 --> 00:07:46.470
+Zaki Mahomed: Because this stuff is moving so fast, we're all reading about it every day, too. Feel free to throw that at me, too. So I'll turn it around to you guys. Tell me about
+
+76
+00:07:46.500 --> 00:07:50.089
+Zaki Mahomed: What's hurting right now, and where you think we can help the most.
+
+77
+00:07:51.120 --> 00:08:00.520
+Raleigh Williams: I'll probably kick this to Chandler, because he's, like, we just put in claw, Bach, claw, claw… I'm, like, the most, retarded on the spectrum of all of this.
+
+78
+00:08:00.520 --> 00:08:02.460
+Jon Matzner: We know, we don't need to repeat ourselves, Raleigh.
+
+79
+00:08:02.460 --> 00:08:05.569
+Raleigh Williams: I know, I just… sometimes it's helpful to state it.
+
+80
+00:08:05.570 --> 00:08:06.590
+Jon Matzner: Okay, alright, I just…
+
+81
+00:08:06.590 --> 00:08:07.300
+Raleigh Williams: You know…
+
+82
+00:08:07.740 --> 00:08:09.619
+Jon Matzner: Rafaela put that in the form, actually?
+
+83
+00:08:09.620 --> 00:08:10.370
+Raleigh Williams: Maybe so, me.
+
+84
+00:08:10.370 --> 00:08:11.559
+Chandler Woodward: It makes me…
+
+85
+00:08:11.560 --> 00:08:24.099
+Raleigh Williams: It's just better to make the obvious known, and so Chandler is the… is the… well, Ralph is probably the least retarded. Chandler… but Chandler is the guy running everything, and then I'm the most retarded, so… so Chandler.
+
+86
+00:08:24.100 --> 00:08:26.770
+Chandler Woodward: I'm not retarded, so I don't know how that just makes me feel better.
+
+87
+00:08:26.770 --> 00:08:30.270
+Raleigh Williams: I'm at my house, so I could say retarded. If I was in public, I wouldn't be able to say this shit.
+
+88
+00:08:30.420 --> 00:08:38.590
+Chandler Woodward: Yeah, I think, so the question was what, like, what some of our biggest problems that AI could probably solve, is that you're asking?
+
+89
+00:08:38.750 --> 00:08:42.650
+Zaki Mahomed: Yeah, and you know, generally, like, what I really like to hone in on, just to, like.
+
+90
+00:08:42.659 --> 00:08:49.029
+Jon Matzner: I just… yeah, and Chandler, I want to be clear, right? It's… there's a… do you guys understand the difference between AI and AI agents?
+
+91
+00:08:49.170 --> 00:08:49.570
+Chandler Woodward: Yeah, yeah.
+
+92
+00:08:49.570 --> 00:08:51.810
+Jon Matzner: Huge difference. Okay, for sure.
+
+93
+00:08:51.850 --> 00:09:01.190
+Zaki Mahomed: As a cheat code, think of problems where… which are repeatedly done, so you do them very often, or fairly often, the processes that are run fairly often, and are, you know.
+
+94
+00:09:01.340 --> 00:09:08.039
+Zaki Mahomed: structured, but still requires some thought, basically, as they run, and those are generally things that are ripe for, like, agentic disruption.
+
+95
+00:09:08.910 --> 00:09:09.780
+Chandler Woodward: Gotcha.
+
+96
+00:09:09.990 --> 00:09:12.959
+Chandler Woodward: Yeah, I think there's probably, like.
+
+97
+00:09:13.120 --> 00:09:23.269
+Chandler Woodward: I mean, all of our customer service, I assume, could be completely automated, or, like, have agents running that whole entire process there.
+
+98
+00:09:23.970 --> 00:09:35.649
+Chandler Woodward: I mean, there's, like… I think the hard part in our business is, like, everything… you have to, like, go out and pull the data out, or it's so hard to go find some things every once in a while, and so just that extra time that takes to…
+
+99
+00:09:35.770 --> 00:09:41.750
+Chandler Woodward: You know, be able to see… so, for example, we've got issues right now where
+
+100
+00:09:41.910 --> 00:09:53.240
+Chandler Woodward: we don't know where the order's at in the process, technically. Like, there's, like, they purchase it online, they go to shop, they… they fill out an intake form, that intake form gets sent to a nurse practitioner.
+
+101
+00:09:53.460 --> 00:09:55.620
+Chandler Woodward: That nurse practitioner needs to approve it.
+
+102
+00:09:56.040 --> 00:09:59.979
+Chandler Woodward: The… once they approve that, we then send that to a pharmacy to get filled.
+
+103
+00:10:00.080 --> 00:10:02.979
+Chandler Woodward: And then the pharmacy sends it to the…
+
+104
+00:10:03.090 --> 00:10:09.929
+Chandler Woodward: The customer, and we need to grab that tracking number, get that to that customer, and so sometimes there's always… there's, like.
+
+105
+00:10:10.140 --> 00:10:17.729
+Chandler Woodward: Either it gets lost in the approval phase, so it's like,
+
+106
+00:10:17.840 --> 00:10:22.220
+Chandler Woodward: So we, like, don't have eyes on that most of the time.
+
+107
+00:10:22.320 --> 00:10:32.559
+Chandler Woodward: So that's, like, kind of some, like, at least operationally, there is an issue that I feel like an agent, at least overseeing that or running that, could possibly solve.
+
+108
+00:10:32.750 --> 00:10:40.630
+Chandler Woodward: There's… Our affiliate marketing playbook that we have running that's, like.
+
+109
+00:10:40.630 --> 00:10:44.900
+Raleigh Williams: And even… even on the customer service thing, like, we get a lot of customers, like.
+
+110
+00:10:45.610 --> 00:10:55.700
+Raleigh Williams: I would love to, even if it's stuck in process with the pharmacy, just much better communication with the customer about where it's at in process, because that's a pretty manual…
+
+111
+00:10:57.620 --> 00:11:02.210
+Raleigh Williams: thing for us, and so we get a lot of frustrated customers because
+
+112
+00:11:02.360 --> 00:11:06.699
+Raleigh Williams: The pharmacy is backed up for whatever reason, and
+
+113
+00:11:07.020 --> 00:11:13.320
+Raleigh Williams: And we're just not… for whatever reason, communication falls through the cracks in some way of just, like.
+
+114
+00:11:13.700 --> 00:11:23.819
+Raleigh Williams: Hey, just so you know, it's at the pharmacy, we'll let you know the next step, and, you know, so just communication with the customer tends to be one of our biggest…
+
+115
+00:11:23.970 --> 00:11:34.219
+Raleigh Williams: frustrations with our customers is they just feel like they don't know where something's at, and it's kind of out of our hands. So that's… anyway, just thought I'd add that. Keep going, Chad.
+
+116
+00:11:34.220 --> 00:11:37.419
+Zaki Mahomed: Like, pro… a proactive customer service agent.
+
+117
+00:11:37.420 --> 00:11:37.820
+Chandler Woodward: Yeah.
+
+118
+00:11:37.820 --> 00:11:38.330
+Zaki Mahomed: Canada.
+
+119
+00:11:38.330 --> 00:11:43.899
+Chandler Woodward: I think, John, you were one of our… I think John was one of our customers in the past. You probably could help us fix our whole entire system here, you know?
+
+120
+00:11:43.900 --> 00:11:50.899
+Jon Matzner: Yeah, what I tell you guys is, you know, I wanted to try it, like, because Raleigh wrote a great post about, like, microdosing and…
+
+121
+00:11:50.900 --> 00:11:51.290
+Zaki Mahomed: Bye.
+
+122
+00:11:51.290 --> 00:11:54.949
+Jon Matzner: you know, I just tried, it was great. But what I can tell you is,
+
+123
+00:11:55.290 --> 00:11:58.379
+Jon Matzner: I don't mean to be, like, diminutive here, or, like.
+
+124
+00:11:58.380 --> 00:11:59.249
+Chandler Woodward: Oh, go for it.
+
+125
+00:11:59.250 --> 00:12:06.960
+Jon Matzner: but, like, a QR code that I could text as I was opening it, and being like, here's the update, here's how.
+
+126
+00:12:06.960 --> 00:12:07.390
+Chandler Woodward: Yeah.
+
+127
+00:12:07.390 --> 00:12:19.930
+Jon Matzner: it, hey, I have a question, what the fuck is this thing you included in the package? And it's conversational and instantly available as a part of the unboxing process. Would have changed my life.
+
+128
+00:12:19.930 --> 00:12:20.300
+Zaki Mahomed: interesting, too.
+
+129
+00:12:20.300 --> 00:12:20.950
+Raleigh Williams: Yeah.
+
+130
+00:12:20.950 --> 00:12:38.230
+Jon Matzner: You know, and if you need to elevate to a human, like, what… like, that's… I know that's a very straightforward build, uploading your knowledge dataset, you know, letting it be conversational on a phone, because everybody's got their phone with them when they open something up. That was the one I think I was, like.
+
+131
+00:12:38.230 --> 00:12:41.520
+Jon Matzner: bugging Raleigh about. I was like, dude, let me, like, I'm so confused!
+
+132
+00:12:41.520 --> 00:12:42.389
+Chandler Woodward: It's tough to do that.
+
+133
+00:12:42.400 --> 00:12:43.890
+Jon Matzner: Like, so…
+
+134
+00:12:43.890 --> 00:12:44.420
+Chandler Woodward: You know.
+
+135
+00:12:44.420 --> 00:12:56.649
+Raleigh Williams: Yeah, I think that's… I think it's… it actually is a pretty big… it is a pretty big, like, onboarding lift for a customer, like, to get into our EHR system, and to, like… like, it takes them a second to, like.
+
+136
+00:12:56.840 --> 00:13:00.459
+Raleigh Williams: just… Get… make heads or tails of…
+
+137
+00:13:00.780 --> 00:13:06.110
+Raleigh Williams: Doing everything, and it's a pretty intimidating process if you've never put a needle in your ass.
+
+138
+00:13:06.110 --> 00:13:06.560
+Jon Matzner: Correct.
+
+139
+00:13:06.560 --> 00:13:07.220
+Raleigh Williams: to…
+
+140
+00:13:07.220 --> 00:13:09.650
+Jon Matzner: That's how I felt. Like, am I even doing this right?
+
+141
+00:13:09.940 --> 00:13:10.620
+Chandler Woodward: Yeah.
+
+142
+00:13:10.620 --> 00:13:14.840
+Jon Matzner: you know, I don't even know, like… I've never done a needle before, so…
+
+143
+00:13:15.160 --> 00:13:17.230
+Raleigh Williams: And so, I would say that it would be…
+
+144
+00:13:17.450 --> 00:13:34.770
+Raleigh Williams: like, we handle, like, I would say proactive customer success slash support, where we're starting the conversation and checking and giving them the format to voice their frustrations and to let them know that we're here and we're hearing them, as opposed to just, like.
+
+145
+00:13:34.770 --> 00:13:47.910
+Raleigh Williams: Them getting frustrated, frustrated, frustrated, and then… and then by the time they figure out how to reach out to customer support, they're, like, fucking… they're livid, and, like, ready to blast our customer support agents, because, like.
+
+146
+00:13:47.970 --> 00:14:00.900
+Raleigh Williams: they… they just haven't heard from us, and we haven't talked to them because we're waiting on the pharmacy, so I would say… I'd say that problem set, there's probably… and that may be two separate agents, which would be fine to, like.
+
+147
+00:14:01.050 --> 00:14:01.810
+Chandler Woodward: Done with.
+
+148
+00:14:01.810 --> 00:14:04.400
+Raleigh Williams: work on.
+
+149
+00:14:04.970 --> 00:14:18.329
+Raleigh Williams: The unboxing piece is a little bit more difficult, because we don't… we don't… at least right now, it goes straight from order to pharmacy to them, and we have some pharmacies that will build custom boxes for us, but that could also be sent in an email.
+
+150
+00:14:18.330 --> 00:14:24.669
+Jon Matzner: Well, I was gonna say, yeah, if you would have just said, by the way, when you get it, click this link and walk… Totally. That's fine, too. Yeah.
+
+151
+00:14:24.670 --> 00:14:25.860
+Raleigh Williams: 30%.
+
+152
+00:14:25.860 --> 00:14:38.810
+Zaki Mahomed: We have a couple of good ideas we've identified already on the customer success side. Those are very ripe and good ones to start with, and then we can, like, expand from there, and I'm sure there's a lot more. Which one hurts more? Like, where would you want to go start from there?
+
+153
+00:14:44.330 --> 00:14:44.879
+Chandler Woodward: Or, you know.
+
+154
+00:14:44.880 --> 00:14:45.769
+Zaki Mahomed: You're muted, Reggie.
+
+155
+00:14:47.680 --> 00:14:51.900
+Raleigh Williams: Oh, muted. Which one of those two? Of, like… Yes.
+
+156
+00:14:53.750 --> 00:15:08.040
+Raleigh Williams: I mean, I think they're interrelated. I think one is, like, stopping the bleeding, like, which is just having better communication throughout the process of the customer, and then the other one is probably, like, actually moving the ball forward. One is, like, how to make customers not pissed at us anymore.
+
+157
+00:15:08.240 --> 00:15:17.300
+Raleigh Williams: And then the second one is once they get it. So, I would say the more hair-on-fire one is, like, just laying the foundation of customers not pissed, like.
+
+158
+00:15:17.420 --> 00:15:30.269
+Raleigh Williams: Better proactive communication before they get the thing, and then the secondary thing would be, once you get the thing, here are the next couple steps, maybe an upsell to, you know, have them buy their next thing, or, you know, whatever.
+
+159
+00:15:30.660 --> 00:15:34.440
+Zaki Mahomed: Nice, yes, I think that's a great idea, too. Upsell's smart there.
+
+160
+00:15:35.200 --> 00:15:36.140
+Chandler Woodward: Proactive.
+
+161
+00:15:36.140 --> 00:15:40.729
+Zaki Mahomed: communication would be interesting. I think that's a… that's a good way to put it. Sorry, Chandler, I didn't mean to cut you off.
+
+162
+00:15:40.730 --> 00:15:44.719
+Chandler Woodward: No, no, no, I would say, yeah, if you could put it on there as well, as a potential one, is, like.
+
+163
+00:15:45.650 --> 00:15:54.429
+Chandler Woodward: like, I don't… from the agent-wise, have you guys had seen, like, success with, like, developer agents? Like, we have a huge, like…
+
+164
+00:15:54.670 --> 00:16:02.010
+Chandler Woodward: We get, you know, our whole thing is, like, tech set up, and so it's communicating to different platforms, and…
+
+165
+00:16:02.230 --> 00:16:10.080
+Chandler Woodward: Right now, it's like, we just have a contractor that will every once in a while go in and we have a problem, but, like, why are we gonna have someone that's, like.
+
+166
+00:16:10.200 --> 00:16:17.290
+Chandler Woodward: An agent working 24-7, always fixing bugs, optimizing, making sure it's, like, Nothing, like, for example.
+
+167
+00:16:17.520 --> 00:16:20.009
+Chandler Woodward: We have… or it comes into South Florida.
+
+168
+00:16:20.010 --> 00:16:21.759
+Jon Matzner: Yeah, Chandler, what I would say is I'm gonna say.
+
+169
+00:16:21.760 --> 00:16:23.039
+Chandler Woodward: Every single month, like.
+
+170
+00:16:23.040 --> 00:16:24.709
+Jon Matzner: Chandler, what I would say is.
+
+171
+00:16:24.950 --> 00:16:35.920
+Jon Matzner: there's, like, 7 different agents within what you just said. The idea is to say, like, a API breaking agent that sees whenever an API breaks. One is called a site load.
+
+172
+00:16:35.920 --> 00:16:36.280
+Chandler Woodward: Yeah.
+
+173
+00:16:36.280 --> 00:16:43.360
+Jon Matzner: to age it. Like, there's sub… right? It's not just like, make my code better, right? It's more like…
+
+174
+00:16:43.490 --> 00:16:44.060
+Jon Matzner: data.
+
+175
+00:16:44.060 --> 00:16:44.409
+Chandler Woodward: My pleasure.
+
+176
+00:16:44.410 --> 00:16:45.770
+Jon Matzner: agent, or…
+
+177
+00:16:46.160 --> 00:16:50.740
+Jon Matzner: enrichment, or, right? Like, that's how we're gonna attack this, is, like, fin, fin, slice.
+
+178
+00:16:50.740 --> 00:16:51.130
+Chandler Woodward: Gotcha.
+
+179
+00:16:51.130 --> 00:16:57.500
+Jon Matzner: That's what's… it's just like an employee, by the way. The more focused their output, the higher quality and the higher volume. It's exactly the same as.
+
+180
+00:16:57.840 --> 00:16:58.740
+Zaki Mahomed: member of your team.
+
+181
+00:16:58.740 --> 00:16:59.360
+Jon Matzner: Yeah.
+
+182
+00:16:59.530 --> 00:16:59.900
+Chandler Woodward: Absolutely.
+
+183
+00:17:00.190 --> 00:17:02.049
+Jon Matzner: Yeah, so, Saki, back to you.
+
+184
+00:17:02.360 --> 00:17:04.440
+Zaki Mahomed: No, I think that's… that's just exactly right.
+
+185
+00:17:04.440 --> 00:17:06.600
+Jon Matzner: Yeah, dude, you're the one who taught me that.
+
+186
+00:17:07.140 --> 00:17:08.520
+Jon Matzner: I hope you think that's right.
+
+187
+00:17:08.520 --> 00:17:11.150
+Zaki Mahomed: Our framework is to, like, build you
+
+188
+00:17:11.329 --> 00:17:27.339
+Zaki Mahomed: an agent that solves a specific problem, like an agent of agents is a different challenge altogether, and so… yeah, I don't think that we tackle that one. But, you know, if there's specific problems on the tech front, then definitely agents could be. Like, affiliate marketing, you mentioned before we went down the CS rabbit hole.
+
+189
+00:17:27.339 --> 00:17:42.139
+Zaki Mahomed: That could be… that's specific, right? And that could be, like, payout management. We've done things around that, and things like that, too. So, yeah, we can definitely talk about, like, I'm recording all the good ideas we're generating here, and I'll also have, like, hey, here's future agents that we can talk through.
+
+190
+00:17:42.180 --> 00:17:55.449
+Zaki Mahomed: If you guys feel proactive communication is a good one, I think that's a really good first challenge. If that's painful enough, that's a very good first challenge to start with. I want to dig in a little bit, and like, let's start with me just repeating back what I have heard from, like, how the process works.
+
+191
+00:17:55.450 --> 00:18:07.920
+Zaki Mahomed: And then we can jump into, like, what each node looks like, right? Like, what that timeline looks like. So, you know, you do the intake online, you do a bunch of activity before the intake, that's the conversion, then you get connected to a nurse practitioner.
+
+192
+00:18:09.400 --> 00:18:15.589
+Zaki Mahomed: And then there's a pharmacy that fills the order. I assume the delay can happen at the nurse end?
+
+193
+00:18:15.790 --> 00:18:20.179
+Zaki Mahomed: Or the pharmacy end, right? Either? Or is there, like, one end that's generally more troublesome?
+
+194
+00:18:22.720 --> 00:18:26.479
+Raleigh Williams: Yeah, it can happen, it can… because first they buy, first they are.
+
+195
+00:18:26.480 --> 00:18:26.920
+Zaki Mahomed: purchased.
+
+196
+00:18:26.920 --> 00:18:32.520
+Raleigh Williams: And then they get an intake form, so a delay can happen if they don't fill out the intake form in a timely manner.
+
+197
+00:18:32.720 --> 00:18:36.359
+Raleigh Williams: And then a delay can happen from intake to nurse practitioner.
+
+198
+00:18:37.010 --> 00:18:41.849
+Raleigh Williams: We're trying to solve that by just bringing on another nurse practitioner, but that's kind of on us.
+
+199
+00:18:42.100 --> 00:18:48.049
+Raleigh Williams: And then the delay could happen from post-nurse practitioner approval to the pharmacy.
+
+200
+00:18:50.690 --> 00:19:04.549
+Raleigh Williams: So those are the three, kind of, clawed points. I bought… I bought, and I haven't filled out the order. I filled out… I bought, but I haven't filled out my intake. Intake, but I haven't been reviewed. I've been reviewed, but I haven't gotten my shit.
+
+201
+00:19:04.680 --> 00:19:09.319
+Zaki Mahomed: And then, I guess, like, maybe the final step there would be, like, USPS, delivery delays, right? That could be…
+
+202
+00:19:09.320 --> 00:19:09.780
+Raleigh Williams: That's true.
+
+203
+00:19:09.780 --> 00:19:21.519
+Zaki Mahomed: Yeah, that could be another touchpoint. Cool. How are you guys looking at this information? Where is this being managed internally? Like, where is each step being managed? Do you have, like, your own internal tools? Is it an Excel spreadsheet? What does it look like?
+
+204
+00:19:24.120 --> 00:19:24.840
+Raleigh Williams: Chan?
+
+205
+00:19:28.760 --> 00:19:30.520
+Zaki Mahomed: I think you're on mute, if you're central.
+
+206
+00:19:38.480 --> 00:19:39.519
+Raleigh Williams: Jam, cham, jam.
+
+207
+00:19:42.730 --> 00:19:47.100
+Raleigh Williams: I can guess how it goes.
+
+208
+00:19:47.100 --> 00:19:48.049
+Zaki Mahomed: Start there?
+
+209
+00:19:48.050 --> 00:19:49.970
+Raleigh Williams: Or wrong.
+
+210
+00:19:49.970 --> 00:19:50.329
+Chandler Woodward: Do you know.
+
+211
+00:19:50.330 --> 00:19:51.120
+Raleigh Williams: Logos?
+
+212
+00:19:53.100 --> 00:19:53.700
+Chandler Woodward: There's…
+
+213
+00:19:54.600 --> 00:19:55.509
+Rafaela Mae Galupo: Oh, there we go.
+
+214
+00:19:55.510 --> 00:19:57.180
+Chandler Woodward: Hello, you hear me? You hear me?
+
+215
+00:19:57.940 --> 00:19:59.499
+Chandler Woodward: Okay, you hear me?
+
+216
+00:20:00.270 --> 00:20:01.179
+Zaki Mahomed: There you go.
+
+217
+00:20:01.180 --> 00:20:05.000
+Raleigh Williams: time to get your workout in, bro. We're trying to… we're trying to be on business, bro.
+
+218
+00:20:06.940 --> 00:20:09.569
+Chandler Woodward: I am here.
+
+219
+00:20:09.570 --> 00:20:10.430
+Raleigh Williams: unprofessional.
+
+220
+00:20:10.430 --> 00:20:14.369
+Jon Matzner: You can drink a protein shake on a call, but don't you dare exercise.
+
+221
+00:20:14.370 --> 00:20:15.640
+Zaki Mahomed: Okay.
+
+222
+00:20:15.640 --> 00:20:17.220
+Raleigh Williams: Height of unprofessionalism.
+
+223
+00:20:17.220 --> 00:20:17.810
+Jon Matzner: My God.
+
+224
+00:20:17.810 --> 00:20:19.420
+Chandler Woodward: Hey, this is not…
+
+225
+00:20:19.420 --> 00:20:20.220
+Raleigh Williams: Connor out here.
+
+226
+00:20:20.220 --> 00:20:21.580
+Chandler Woodward: With mustaches.
+
+227
+00:20:21.580 --> 00:20:22.950
+Zaki Mahomed: You know what I mean?
+
+228
+00:20:24.890 --> 00:20:30.170
+Chandler Woodward: because of the… Yeah, all the data… so you've got data in Shopify, that's where the order's created.
+
+229
+00:20:30.670 --> 00:20:33.730
+Chandler Woodward: shoots over to, our EHR.
+
+230
+00:20:34.160 --> 00:20:38.059
+Chandler Woodward: Which is called Telescope. That's where most of this stuff is all managed.
+
+231
+00:20:38.190 --> 00:20:48.869
+Chandler Woodward: And then… so that's where the intake form is, that's where it gets approved by the nurse practitioner. Once that's done, once it's approved, it gets sent over to the pharmacy on a whole different site.
+
+232
+00:20:50.750 --> 00:21:01.309
+Chandler Woodward: And depending on which product they buy, it goes to a different pharmacy, and then they will give us a… they will send… and then we'll have to manually kind of go track… go look back.
+
+233
+00:21:01.460 --> 00:21:04.490
+Chandler Woodward: When that order was shipped, or filled.
+
+234
+00:21:04.640 --> 00:21:12.809
+Chandler Woodward: And then grab that tracking number, put that inside of Shopify, and then Shopify will send that info to the customer and say, hey, your order's on the way.
+
+235
+00:21:12.990 --> 00:21:17.609
+Chandler Woodward: But most of the communication is in telescope from when they order to when it's filled.
+
+236
+00:21:18.220 --> 00:21:24.709
+Zaki Mahomed: Are you guys doing, like, communication, like, nurse practitioner approved, into pharmacy? How's that… how's that being managed?
+
+237
+00:21:24.710 --> 00:21:39.700
+Chandler Woodward: Yeah, so once you fill out an intake form, you get a text and an email saying, orders, thank you for filling out the… thank you for filling out the form, you're… it's being, reviewed. Once the, and that same exact process happens when the…
+
+238
+00:21:39.950 --> 00:21:44.560
+Chandler Woodward: Nurse approves it, you get a text and email, and then when the order is shipped, you get a text and email as well.
+
+239
+00:21:45.020 --> 00:21:51.360
+Zaki Mahomed: Okay, and so where is the breakage, then, if then? And I guess, how is information being sent between systems today?
+
+240
+00:21:52.510 --> 00:21:54.590
+Chandler Woodward: API, like,
+
+241
+00:21:54.800 --> 00:21:59.909
+Chandler Woodward: Yeah, I think Zapier, too. It's really, like, duct tape. It's, like, a terrible, terrible process. It's…
+
+242
+00:21:59.910 --> 00:22:00.850
+Zaki Mahomed: Interesting.
+
+243
+00:22:00.850 --> 00:22:01.200
+Chandler Woodward: Yeah.
+
+244
+00:22:01.200 --> 00:22:06.099
+Zaki Mahomed: And have you guys… are you guys managing that yourself internally, or is it, like, just ducted by you guys through between the tools?
+
+245
+00:22:06.100 --> 00:22:14.820
+Chandler Woodward: Yeah, just, like, hired some contractor who had done Telescope Shopify integration build-out in the past, and
+
+246
+00:22:15.240 --> 00:22:25.330
+Chandler Woodward: the way we're doing it is definitely different than, I guess, most telehealth companies do it. Most telehealth companies, but anyway, so yeah, that integration kind of…
+
+247
+00:22:25.480 --> 00:22:27.000
+Chandler Woodward: Gets a little tweaked.
+
+248
+00:22:27.610 --> 00:22:31.509
+Zaki Mahomed: How is it different from how most Elliot companies do it? Like, maybe they can learn something from that.
+
+249
+00:22:31.510 --> 00:22:39.789
+Chandler Woodward: Like, usually most of all the companies, you fill out a quiz first, and then you purchase, where we do purchase, then quiz, then, like, intake form.
+
+250
+00:22:40.210 --> 00:22:47.510
+Zaki Mahomed: Gotcha. How do you guys communicate with the pharmacies? Like, is that different platforms, email, like, is it… or is it… yeah.
+
+251
+00:22:47.510 --> 00:22:56.140
+Chandler Woodward: So, yeah, you… they have their own… everybody has their own, like, own, basically, ordering software… ordering platform.
+
+252
+00:22:56.320 --> 00:22:58.929
+Chandler Woodward: Right? And then, we do…
+
+253
+00:22:59.240 --> 00:23:07.159
+Chandler Woodward: We go in and manually check, and then if, like, the order's behind, like, we'll have our customer service guy reach out and say, hey, where's this order at?
+
+254
+00:23:07.330 --> 00:23:08.870
+Zaki Mahomed: Yeah.
+
+255
+00:23:08.870 --> 00:23:11.360
+Chandler Woodward: To make sure it's, like, getting sent out on time.
+
+256
+00:23:11.690 --> 00:23:17.780
+Zaki Mahomed: Gotcha. And so that's like a pharmacy, like, app that they give you access to. You log into it.
+
+257
+00:23:17.780 --> 00:23:21.769
+Chandler Woodward: Yeah, yeah, I think the actual name of it's called WellSync.
+
+258
+00:23:22.130 --> 00:23:22.830
+Zaki Mahomed: Okay.
+
+259
+00:23:22.950 --> 00:23:25.449
+Zaki Mahomed: Oh, they all use the same… they all use the same app, Wells Center.
+
+260
+00:23:25.450 --> 00:23:29.370
+Chandler Woodward: No, some use WellSync, some use different types of
+
+261
+00:23:29.640 --> 00:23:31.779
+Chandler Woodward: A different platform for each one.
+
+262
+00:23:32.460 --> 00:23:38.189
+Zaki Mahomed: I'd love to get more information on, like, those platforms, because, like, the agent will hook into each of those platforms, and so it's.
+
+263
+00:23:38.190 --> 00:23:38.530
+Chandler Woodward: Yeah.
+
+264
+00:23:38.530 --> 00:23:45.859
+Zaki Mahomed: So, it's better to double-click on that and dig in. So if you can share more about that, or maybe you can send it to me later if you're not the right person to grab that from.
+
+265
+00:23:46.550 --> 00:23:54.640
+Chandler Woodward: Yeah, I mean, it's, WellSync, I know, is the first one, and then I think, let me see what Pharmacy Hub uses… I think they do… Correct.
+
+266
+00:23:55.100 --> 00:23:58.299
+Zaki Mahomed: Are there any, like, manual pharmacies? Like, we just send them an email or make a phone call?
+
+267
+00:23:58.300 --> 00:24:03.299
+Chandler Woodward: No, - everything's all… everything's… we go in, yeah, we go in and place the order.
+
+268
+00:24:03.470 --> 00:24:08.419
+Chandler Woodward: interesting. Yeah, on their portal.
+
+269
+00:24:08.960 --> 00:24:14.550
+Zaki Mahomed: Okay, so… where is the major breakage seems to be? I guess, like, if you're, like…
+
+270
+00:24:15.260 --> 00:24:27.959
+Zaki Mahomed: There seem to be two major points of breakage. Tell me if there's more, I'm sure there's more, I'm just, like, the two major points that I've gathered are nurse practitioner does not schedule it, like, somehow it falls through the cracks there, right? Since, like, we have, like, a limited limit there.
+
+271
+00:24:28.230 --> 00:24:45.890
+Zaki Mahomed: And then we've got, a constraint on the pharmacy… like, basically, I ordered it with the pharmacy, but now we haven't followed up on the order because, like, it's late, or delayed, or the pharmacy missed it, or it's just pending. And so, are those the two painful spots, or are there, like, more places where it can fall through the cracks?
+
+272
+00:24:46.840 --> 00:24:52.980
+Chandler Woodward: If they don't fill out the intake form, it can cause problems, but we send out, like.
+
+273
+00:24:53.160 --> 00:25:05.609
+Chandler Woodward: I mean, we hit them up pretty hard now. Like, there's, like, an automated flow of, like, basically an abandoned intake form, is what we call it. So, like, they start it, but don't fill it out, like, they get hit up consistently.
+
+274
+00:25:05.990 --> 00:25:07.430
+Chandler Woodward: Every day for, like…
+
+275
+00:25:07.430 --> 00:25:12.750
+Zaki Mahomed: stuff in Shopify would be really good, right? Like, that's… I'm sure there's, like, plugins for that and stuff that you're leveraging.
+
+276
+00:25:13.040 --> 00:25:16.090
+Chandler Woodward: Yeah, yeah, yeah, this is, like, for Inside Telescope.
+
+277
+00:25:16.580 --> 00:25:18.220
+Zaki Mahomed: post-sign-up, basically.
+
+278
+00:25:18.220 --> 00:25:19.700
+Chandler Woodward: Yeah, post-purchase, yeah.
+
+279
+00:25:19.950 --> 00:25:25.170
+Zaki Mahomed: Do you think it's worthwhile doing something? I mean, I'm sure… are you guys sending text messages and all that stuff on the intake form side, too?
+
+280
+00:25:27.090 --> 00:25:28.120
+Chandler Woodward: Talian.
+
+281
+00:25:28.120 --> 00:25:31.489
+Zaki Mahomed: Are you guys doing text messages and stuff, too, besides, like, email?
+
+282
+00:25:31.700 --> 00:25:32.480
+Zaki Mahomed: On that end.
+
+283
+00:25:33.410 --> 00:25:35.090
+Chandler Woodward: Yeah, just text and email.
+
+284
+00:25:35.090 --> 00:25:43.000
+Zaki Mahomed: Okay, well, do you… so I, I think what we could do here is… I mean, I'm just, I'm just,
+
+285
+00:25:44.080 --> 00:25:58.739
+Zaki Mahomed: thinking out loud here, I want to make sure, I think… I think we have a good sense of, like, where this could go. We build you an agent that's, like, you know, your… you can think about it as, like, a proactive customer success agent, essentially, and so it's not…
+
+286
+00:25:58.740 --> 00:26:07.039
+Zaki Mahomed: replacing the integrations you have going, but it's supplementing them to make sure nothing drops through the cracks, because there's, like, so many edge cases that can happen, essentially, right?
+
+287
+00:26:07.620 --> 00:26:19.770
+Zaki Mahomed: in between them, that it would be hard to build a Zapier connector that would, like, manage all of those, right? Like, hey, if it's late for this reason, do this, and if it's late for this reason, do that. So that's where reasoning can really help, like, an LLM could really help, right? Or an agent could really help.
+
+288
+00:26:19.770 --> 00:26:35.250
+Zaki Mahomed: And so what it looks for is those two gaps, right? And then there's more gaps, we can add those to and extend the same way. We can build you new LEGO bricks, or make the same brick bigger, basically, right? But I think the two graphs it really addresses are, like, hey, did this order get booked?
+
+289
+00:26:35.250 --> 00:26:41.210
+Zaki Mahomed: And if it's beyond a certain date, or a certain time, it, like, slowly escalates that up the chain, right? It could culminate.
+
+290
+00:26:41.210 --> 00:26:41.590
+Chandler Woodward: Is there…
+
+291
+00:26:41.590 --> 00:26:57.699
+Zaki Mahomed: an email to you, right, saying, hey, this guy is not booked right, right, and… or whoever, right? And that's just to make sure the nurse, that we're, like, you know, and then if there's a delay, it can also skew up a proactive communication to the customer using Shopify, so we don't, like, we ride on that infrastructure.
+
+292
+00:26:57.700 --> 00:27:06.440
+Zaki Mahomed: as much as possible, we don't bill you separate rails for communication, because it's good to centralize that from the customer's point of view, too. But we send a note saying, hey, you know what?
+
+293
+00:27:06.750 --> 00:27:11.080
+Zaki Mahomed: Been a small delay. We'll get you, like, sorted and scheduled.
+
+294
+00:27:11.120 --> 00:27:24.029
+Zaki Mahomed: In a few days, or 3 days. And then also maybe follows up once it's scheduled, saying, hey, you know what, that email I sent you can have a persona and a name and a person, like, it doesn't have to be a bot, right? It could be like, hey, that email I sent you, I got you…
+
+295
+00:27:24.030 --> 00:27:36.480
+Zaki Mahomed: you know, you're scheduled already, you should have gotten an email from our system, let me know, you know. So make, like, a human paying attention to that thing, proactively, before you have to ping us and say, hey, I'm not scheduled, or I'm trying to schedule for the last week, I can't find a time, or whatever.
+
+296
+00:27:36.480 --> 00:27:53.580
+Zaki Mahomed: Right? That's the first bit. And so it's, like, a human first pass proactive agent, that does that. And then the second pass is… or second point it looks at is the pharmacy ordering, right? Again, we can have, like, some sort of internal, like, service level agreement where if it's not fills, or if…
+
+297
+00:27:53.690 --> 00:28:08.779
+Zaki Mahomed: if, like, if it isn't filled in 3 days, or if you don't have an update in 3 days, it, you know, it logs into system, tries to look for an update. If there's no update, it sends that email automatically to the pharmacy Help. So, like, there's only a limited number of pharmacies that we're working with. How many do you guys work with?
+
+298
+00:28:08.780 --> 00:28:10.730
+Chandler Woodward: Yeah, there's two main ones right now.
+
+299
+00:28:10.730 --> 00:28:16.409
+Zaki Mahomed: Okay, perfect. So, like, as we onboard more farmers, like, it literally would be like, hey, here's who you reach out to if you have a problem.
+
+300
+00:28:16.410 --> 00:28:16.920
+Chandler Woodward: That's fine.
+
+301
+00:28:16.920 --> 00:28:23.519
+Zaki Mahomed: And then it'll send an email saying, hey, we're looking for an update on this order. And you can also, like, look at that reply.
+
+302
+00:28:24.070 --> 00:28:43.750
+Zaki Mahomed: and parse it, and update an internal system for us, and send a note out to the customer. The same proactive note saying, I checked in with the pharmacy, they're filling you, however you want to phrase it, right? I'm not sure if you guys exposed the pharmacy, but we're filling it. There's been a small delay, so we plan to get it to you by X date, and here's 10% off your next order.
+
+303
+00:28:43.750 --> 00:28:44.500
+Chandler Woodward: Yep.
+
+304
+00:28:44.500 --> 00:28:56.309
+Zaki Mahomed: And then we can follow up after the order's delivered, saying, hey, I know you had a delay in your order, so, like, I want to check in on you and make sure you got it right. And by the way, here's a 10% off on your next debt. That's where the upsell will kick in a little bit, right? And so…
+
+305
+00:28:56.640 --> 00:29:08.069
+Zaki Mahomed: It's like a human agent, right? That's, like, monitoring and taking care of the orders and, like, communicating before they have… before they realize they have a problem, saying, hey, we're on it, so they don't have to ever email us.
+
+306
+00:29:08.600 --> 00:29:09.009
+Chandler Woodward: in half.
+
+307
+00:29:09.010 --> 00:29:17.709
+Zaki Mahomed: To make sure that the problem got resolved satisfactorily, and that's another touchpoint that we can, like, really escalate, or escalate the relationship, basically.
+
+308
+00:29:18.240 --> 00:29:19.630
+Zaki Mahomed: Does that sound good?
+
+309
+00:29:19.760 --> 00:29:21.409
+Chandler Woodward: Yeah, that's perfect.
+
+310
+00:29:21.750 --> 00:29:22.940
+Zaki Mahomed: How many…
+
+311
+00:29:23.480 --> 00:29:33.469
+Zaki Mahomed: And this is a hard question to answer without more context, but I guess, like, finger in the air, like, how many, like, orders would fall through the cracks, like, weekly or monthly, do you think? How many would this agent be handling?
+
+312
+00:29:37.160 --> 00:29:42.699
+Chandler Woodward: I actually have no idea. I don't know, I mean, it's every once in a while we know that it happens, but
+
+313
+00:29:43.100 --> 00:29:53.039
+Chandler Woodward: I'd say probably… Say… 50, I don't know, on the… exaggerate, I think that's probably…
+
+314
+00:29:53.040 --> 00:29:56.999
+Zaki Mahomed: Okay, yeah, I think that's… that just gives me an idea of what scale, roughly.
+
+315
+00:29:57.450 --> 00:29:58.240
+Zaki Mahomed: Cause we do…
+
+316
+00:29:58.240 --> 00:30:09.530
+Raleigh Williams: We do about 1,000 orders a month right now, so I would say, yeah, probably somewhere between 5 and 10% of the order. Like, whether it's a massive fall through the crack, or, like, a communication
+
+317
+00:30:09.820 --> 00:30:15.320
+Raleigh Williams: faux pas that could have been cleaned up with more proactive, like, there's probably 50 to 100 that…
+
+318
+00:30:15.320 --> 00:30:15.950
+Chandler Woodward: Yeah.
+
+319
+00:30:16.560 --> 00:30:31.280
+Zaki Mahomed: Awesome, okay, that sounds good. Can I, Chandler, can you show us, like, if you can screen share, and maybe you need to just log in from a computer, or anybody could do this. Like, I'd love to see Telescope, like, the EHR records, and I'd love to see, like, WellSync and the other tools that you guys, just, like, what it looks like.
+
+320
+00:30:31.280 --> 00:30:36.370
+Chandler Woodward: Yeah, let me… Ralph, do you have your computer on there?
+
+321
+00:30:36.850 --> 00:30:38.549
+Chandler Woodward: Yep. Computer's in my car.
+
+322
+00:30:41.310 --> 00:30:42.999
+Chandler Woodward: You get telescope access, right?
+
+323
+00:30:44.520 --> 00:30:46.780
+Rafaela Mae Galupo: I think.
+
+324
+00:30:46.960 --> 00:30:47.620
+Zaki Mahomed: I'm just googling this.
+
+325
+00:30:47.970 --> 00:30:50.349
+Zaki Mahomed: as we speak, too. So, yeah, it's good.
+
+326
+00:30:57.660 --> 00:31:00.469
+Rafaela Mae Galupo: Hmm, let me check the password.
+
+327
+00:31:03.580 --> 00:31:08.560
+Chandler Woodward: If not, I think mine's, like, Chandler at fierceHealth.com, and then that's Fierce13?
+
+328
+00:31:08.560 --> 00:31:12.670
+Zaki Mahomed: They're supposed to have a pretty robust API, so that's great.
+
+329
+00:31:12.790 --> 00:31:13.450
+Zaki Mahomed: Yeah.
+
+330
+00:31:17.990 --> 00:31:19.159
+Zaki Mahomed: Awesome. We can start with.
+
+331
+00:31:19.160 --> 00:31:19.710
+Rafaela Mae Galupo: relatively.
+
+332
+00:31:19.710 --> 00:31:27.590
+Zaki Mahomed: If it's easier to, like, load that up. I already pulled up Telescopes, so I'm a little bit more familiar with it, but I bet the pharmacy tools are a little bit more janky.
+
+333
+00:31:29.300 --> 00:31:29.990
+Chandler Woodward: Yeah.
+
+334
+00:31:30.540 --> 00:31:31.750
+Chandler Woodward: Let's see here…
+
+335
+00:31:34.190 --> 00:31:36.460
+Rafaela Mae Galupo: The password isn't working.
+
+336
+00:31:37.610 --> 00:31:38.320
+Chandler Woodward: A telescope.
+
+337
+00:31:39.020 --> 00:31:39.920
+Rafaela Mae Galupo: Yeah.
+
+338
+00:31:40.770 --> 00:31:43.270
+Chandler Woodward: Don't you have, I thought you had an axis there.
+
+339
+00:31:44.630 --> 00:31:49.020
+Zaki Mahomed: Do you have access to the well sink? Like, we can start there.
+
+340
+00:31:51.190 --> 00:31:51.900
+Chandler Woodward: We're also.
+
+341
+00:31:51.900 --> 00:31:53.310
+Rafaela Mae Galupo: Me, I don't.
+
+342
+00:31:56.130 --> 00:31:57.420
+Chandler Woodward: My bad guy, this is…
+
+343
+00:31:57.980 --> 00:31:58.410
+Zaki Mahomed: No worries.
+
+344
+00:31:58.410 --> 00:31:59.690
+Chandler Woodward: I don't know.
+
+345
+00:32:02.670 --> 00:32:05.880
+Zaki Mahomed: Actually, it might be easier if I just look up, the API.
+
+346
+00:32:05.880 --> 00:32:08.660
+Chandler Woodward: If you're on the… it's wellsync.com…
+
+347
+00:32:36.170 --> 00:32:38.929
+Chandler Woodward: Let me go, I'm gonna run in my car real fast, I've got my computer.
+
+348
+00:32:42.010 --> 00:32:45.419
+Rafaela Mae Galupo: Okay, I got in telescope. I'll share my screen for now.
+
+349
+00:32:45.420 --> 00:32:46.690
+Zaki Mahomed: Okay? Right.
+
+350
+00:32:48.650 --> 00:32:49.529
+Chandler Woodward: Did you want to log in?
+
+351
+00:32:55.010 --> 00:33:03.439
+Zaki Mahomed: What would be cool is if you can identify for me, like, an order that would require attention right now, like, whether this agent would handle, like a delayed order, that'd be, like…
+
+352
+00:33:06.000 --> 00:33:08.429
+Rafaela Mae Galupo: I think Albert would be better.
+
+353
+00:33:09.530 --> 00:33:10.550
+Chandler Woodward: Totally.
+
+354
+00:33:10.550 --> 00:33:15.359
+Zaki Mahomed: Okay, what I can do also is, like, I'm gonna, like, definitely have a follow-up question to, like, maybe, like, share with me.
+
+355
+00:33:15.360 --> 00:33:19.319
+Chandler Woodward: That would actually be all… if we could do… yeah, we could do this with Albert.
+
+356
+00:33:19.600 --> 00:33:32.960
+Zaki Mahomed: I probably would want you guys to just share with me, like, have him record a screen and show me, like, a few things. I'd love to see a telescope and see, like, a delayed order, what that looks like in here, like, something the agent would use right now.
+
+357
+00:33:33.190 --> 00:33:45.910
+Zaki Mahomed: And then on the WellSync and the other, like, legit script or whatever we're using on the pharmacy side, I want to see what the inside of the systems look like, because, like, really, half the challenge here is to make sure the systems talk to each other, correctly, right?
+
+358
+00:33:45.910 --> 00:33:48.129
+Chandler Woodward: Here, let me get… let me see if I can have him jump on here.
+
+359
+00:33:48.460 --> 00:33:49.090
+Zaki Mahomed: Sure.
+
+360
+00:33:50.820 --> 00:33:53.080
+Chandler Woodward: If not, do you have time later today, too?
+
+361
+00:33:53.750 --> 00:33:54.639
+Zaki Mahomed: Yeah, I do.
+
+362
+00:33:56.380 --> 00:33:58.099
+Chandler Woodward: Let me see if I can get…
+
+363
+00:34:05.700 --> 00:34:06.370
+Zaki Mahomed: Hmm.
+
+364
+00:34:07.600 --> 00:34:08.949
+Chandler Woodward: Absolutely.
+
+365
+00:34:11.230 --> 00:34:15.319
+Zaki Mahomed: We can find 15 minutes later today, I don't want to keep the whole group around, just to,
+
+366
+00:34:15.320 --> 00:34:16.579
+Chandler Woodward: We'll see if he can jump on this.
+
+367
+00:34:16.580 --> 00:34:17.270
+Zaki Mahomed: your time.
+
+368
+00:34:24.280 --> 00:34:34.120
+Zaki Mahomed: While we're doing that, let's talk about, like, the communication layer itself. So we're managing comps through Shopify? Is there, like, a third… are we using, like, third-party tools to, like, do communication on top of Shopify?
+
+369
+00:34:36.449 --> 00:34:37.479
+Chandler Woodward: Say it again?
+
+370
+00:34:37.489 --> 00:34:44.620
+Zaki Mahomed: like, customer communications, so, like, when we send emails out, is that going through Shopify or some third party? There's so many… that ecosystem is so broad.
+
+371
+00:34:45.040 --> 00:34:46.589
+Zaki Mahomed: Just curious why you guys are sending stuff.
+
+372
+00:34:47.230 --> 00:34:52.359
+Chandler Woodward: ActiveCampaign is where it's, like, post per… is events, like, I guess…
+
+373
+00:34:53.010 --> 00:34:58.350
+Chandler Woodward: Pre-purchase, a lot of it, but then, yeah, all the communication goes from telescopes. Texts, emails, everything.
+
+374
+00:34:58.520 --> 00:34:59.579
+Chandler Woodward: Cool. Let's do Telescope.
+
+375
+00:34:59.580 --> 00:35:03.979
+Zaki Mahomed: So that's… that's gonna be helpful. Like, so then basically we can use telescope as the… as how we trigger the message.
+
+376
+00:35:03.980 --> 00:35:12.200
+Chandler Woodward: Yeah, yeah, Telescope's basically our CRM, it's called the EHR, so it's, like, basically everything, all, like, the patient communication, everything's on there.
+
+377
+00:35:12.640 --> 00:35:17.409
+Zaki Mahomed: Awesome. That is great. And scheduling is on there, too, for the nurses, right?
+
+378
+00:35:17.410 --> 00:35:23.060
+Chandler Woodward: Yeah, so they don't have the schedule, but they do… they do, basically, let's review and intake form.
+
+379
+00:35:23.240 --> 00:35:32.779
+Chandler Woodward: So, the intake form is in there, all the nurse practitioner has to do is just log in, click yes, it's approved, and then that triggers the sequence to go to Albert.
+
+380
+00:35:32.890 --> 00:35:34.700
+Chandler Woodward: For… to fill that order.
+
+381
+00:35:34.920 --> 00:35:40.460
+Zaki Mahomed: Can I get, like, if Albert's not around right now, instead of, like, a phone call, maybe this could be, like, if he's.
+
+382
+00:35:40.460 --> 00:35:42.530
+Chandler Woodward: Yeah, he's gonna jump on right now.
+
+383
+00:35:42.760 --> 00:35:43.920
+Zaki Mahomed: That's ideal.
+
+384
+00:35:44.100 --> 00:35:44.940
+Rafaela Mae Galupo: Oh, great.
+
+385
+00:35:47.810 --> 00:35:48.450
+Zaki Mahomed: Hmm.
+
+386
+00:35:51.310 --> 00:35:54.449
+Zaki Mahomed: Yeah, Telescope looks like it's got a pretty good API, so I think we should have…
+
+387
+00:35:55.030 --> 00:35:55.700
+Chandler Woodward: Yeah.
+
+388
+00:35:55.980 --> 00:35:58.240
+Zaki Mahomed: A good way to, like, get this communication out.
+
+389
+00:36:04.230 --> 00:36:06.689
+Jon Matzner: Fun… fun telehealth fact.
+
+390
+00:36:06.850 --> 00:36:12.350
+Jon Matzner: Andrew Dudum, the CEO of HIMSS, was my pledge at Penn, so I know I'm.
+
+391
+00:36:12.350 --> 00:36:13.160
+Chandler Woodward: Under your head.
+
+392
+00:36:13.410 --> 00:36:14.659
+Zaki Mahomed: Yeah, I was…
+
+393
+00:36:14.660 --> 00:36:16.039
+Jon Matzner: I was just pledge master.
+
+394
+00:36:16.040 --> 00:36:17.020
+Raleigh Williams: I'm buying it.
+
+395
+00:36:17.700 --> 00:36:21.840
+Raleigh Williams: Get him on the acquisition train, bro. Take a… put us out of our misery, you know?
+
+396
+00:36:24.050 --> 00:36:26.390
+Jon Matzner: Yeah, but I know Dunham really well.
+
+397
+00:36:26.390 --> 00:36:27.260
+Chandler Woodward: That's awesome.
+
+398
+00:36:28.600 --> 00:36:29.770
+Chandler Woodward: I'm in.
+
+399
+00:36:29.770 --> 00:36:31.679
+Albert: I'm doing good. How are you guys?
+
+400
+00:36:31.840 --> 00:36:32.280
+Chandler Woodward: Been good.
+
+401
+00:36:32.280 --> 00:36:34.470
+Rafaela Mae Galupo: Thank you, Albert. Yeah, Albert.
+
+402
+00:36:34.470 --> 00:36:35.590
+Chandler Woodward: So we're doing.
+
+403
+00:36:35.590 --> 00:36:37.780
+Jon Matzner: We need you, Albert. Yeah.
+
+404
+00:36:38.170 --> 00:36:54.129
+Chandler Woodward: We, so John and Zachy are helping us set up, like, AI agents to help with a lot of the, Right now we're setting up an agent to do some proactive outreach for customers who are basically, like, behind an order. Like, Whitney was talking to Raleigh yesterday about
+
+405
+00:36:54.180 --> 00:36:59.380
+Chandler Woodward: A possible order that they ordered on the 10th or something, and it's still not being filled.
+
+406
+00:36:59.830 --> 00:37:13.850
+Chandler Woodward: I'm not sure if you know which order that is, but I know there's also orders, like, you know, like, Antonio's running behind on, so what we're trying to do is, yeah, if you could kind of… Zach, do you need him to share a screen of WellSync, or what do you need him to do?
+
+407
+00:37:13.850 --> 00:37:22.519
+Zaki Mahomed: Actually, Albert, I'd like to walk through, like, so we're trying to build this agent that does proactive communication, right? So, it flags,
+
+408
+00:37:22.520 --> 00:37:33.970
+Zaki Mahomed: Like, imagine if you could have a support person just flag every order that could go wrong, and in a couple of particular ways, and then reach out to the customer proactively before they need to reach out to you.
+
+409
+00:37:33.970 --> 00:37:51.599
+Zaki Mahomed: The two points we're looking at are the booking, like the nurse practitioner intake, essentially, right? Like, getting that… getting eyeballs on that, and then also the pharmacy coordination, essentially. So what I'd love to start… do is first check out
+
+410
+00:37:51.600 --> 00:37:59.359
+Zaki Mahomed: Telescope, and identify a couple of orders which might be, like, you know, would be flagged by the agent right now on the nursing side.
+
+411
+00:37:59.540 --> 00:38:07.390
+Zaki Mahomed: And then jump into the VelSync and the other pharmacy platform that you guys are using to see what they look like in there, if that makes sense.
+
+412
+00:38:08.480 --> 00:38:20.800
+Albert: Yeah, a few questions, though. First is, you want to see… I just want to clarify everything. You want to see what orders are being delayed, or what's causing the delay of the orders, is that right?
+
+413
+00:38:21.030 --> 00:38:22.630
+Zaki Mahomed: Essentially, yes, let's start there.
+
+414
+00:38:22.870 --> 00:38:23.540
+Albert: Oh, okay.
+
+415
+00:38:23.740 --> 00:38:32.520
+Albert: Sure, let me just share my… screen here… Probably we're gonna…
+
+416
+00:38:32.760 --> 00:38:35.270
+Albert: Gonna go ahead and share my entire screen then.
+
+417
+00:38:37.640 --> 00:38:38.440
+Albert: Okay.
+
+418
+00:38:39.700 --> 00:38:40.420
+Albert: Am I?
+
+419
+00:38:47.390 --> 00:38:48.110
+Albert: Okay.
+
+420
+00:38:49.470 --> 00:38:53.279
+Albert: start with sharing the telescope, I guess?
+
+421
+00:38:55.650 --> 00:38:56.320
+Albert: Hang on.
+
+422
+00:38:57.430 --> 00:38:58.829
+Albert: Just checking the loop.
+
+423
+00:39:00.110 --> 00:39:01.350
+Albert: Telescope.
+
+424
+00:39:05.450 --> 00:39:06.499
+Albert: I cannot see it.
+
+425
+00:39:07.090 --> 00:39:09.020
+Albert: I'll just share my entire screen now.
+
+426
+00:39:12.800 --> 00:39:13.510
+Albert: Okay.
+
+427
+00:39:21.410 --> 00:39:22.280
+Albert: Hey, man.
+
+428
+00:40:03.060 --> 00:40:04.140
+Zaki Mahomed: Albert, you still there?
+
+429
+00:40:04.630 --> 00:40:05.909
+Zaki Mahomed: I think it may have dropped.
+
+430
+00:40:06.740 --> 00:40:08.160
+Zaki Mahomed: Oh, I think he's dropped out.
+
+431
+00:40:08.940 --> 00:40:10.660
+Chandler Woodward: Oh, dang, yeah, I think he's…
+
+432
+00:40:10.660 --> 00:40:11.050
+Zaki Mahomed: Yeah.
+
+433
+00:40:11.050 --> 00:40:11.760
+Rafaela Mae Galupo: Yeah.
+
+434
+00:40:14.430 --> 00:40:17.060
+Chandler Woodward: Talk about a professional organization today.
+
+435
+00:40:17.560 --> 00:40:18.290
+Zaki Mahomed: Not to worry about it.
+
+436
+00:40:18.290 --> 00:40:20.620
+Rafaela Mae Galupo: Jeez.
+
+437
+00:40:23.410 --> 00:40:24.259
+Zaki Mahomed: Our days back.
+
+438
+00:40:24.950 --> 00:40:29.320
+Zaki Mahomed: I mean, I'm just happy that we identified a problem that can move the business needle for you guys.
+
+439
+00:40:29.730 --> 00:40:33.060
+Zaki Mahomed: It's just gravy, I don't care. Like, that's… I think this is a really meaty product.
+
+440
+00:40:33.060 --> 00:40:36.760
+Albert: I'm so sorry about it. I got lost.
+
+441
+00:40:37.260 --> 00:40:42.230
+Albert: I'm, yeah, I'll just… Yeah, there you go, because the setting is not…
+
+442
+00:40:42.430 --> 00:40:47.760
+Albert: Correct, so I'm just gonna go ahead and… Share this.
+
+443
+00:40:47.940 --> 00:40:50.230
+Albert: Okay, if you can see my screen now…
+
+444
+00:40:51.180 --> 00:40:51.800
+Rafaela Mae Galupo: Yep.
+
+445
+00:40:52.490 --> 00:40:53.050
+Albert: Okay.
+
+446
+00:40:53.200 --> 00:41:00.789
+Albert: Gotcha. So, the first thing that I'm, checking here for the delay shipment is, this.
+
+447
+00:41:01.520 --> 00:41:05.269
+Albert: Whenever the patient reaches out, they are…
+
+448
+00:41:05.380 --> 00:41:13.399
+Albert: Asking if, where are their shipment, and then upon checking, I didn't see if their order has been…
+
+449
+00:41:13.590 --> 00:41:25.429
+Albert: or the intake has been approved, so, I'm checking if those shipment, or there's already a notification that it was approved, and you will see it here.
+
+450
+00:41:25.630 --> 00:41:26.930
+Albert: This one.
+
+451
+00:41:27.370 --> 00:41:43.279
+Albert: That means that Dr. A's admin approved the shipment. But what I'm doing exactly is I'm going here in our, sheet. Sorry if it's too messed, I'm just…
+
+452
+00:41:43.410 --> 00:41:47.539
+Albert: you know, checking all the… I'm actually marking the…
+
+453
+00:41:47.930 --> 00:41:53.800
+Albert: the patient if the intake has not been approved. So let's say, for example, this patient.
+
+454
+00:41:53.800 --> 00:41:54.190
+Zaki Mahomed: submit.
+
+455
+00:41:54.190 --> 00:42:03.930
+Albert: or there's no intake, or the notice intake form. So what I'm doing is just checking this patient, go to telescope.
+
+456
+00:42:04.170 --> 00:42:17.730
+Albert: and then, check the name, and if they… if this patient didn't submit any intake form, I'm leaving, I'm leaving that patient. I'm not doing anything, because the system is sending them
+
+457
+00:42:17.790 --> 00:42:32.690
+Albert: Notification. You know, a notification that this needs to, or that exactly what shows there, like, get in touch with this patient. So I just click on, and then we were going to send a notification that this, hey, you need to fill out the intake form. So…
+
+458
+00:42:32.690 --> 00:42:37.459
+Zaki Mahomed: Did you… sorry, as well. Do you click on that, or does it just go automatically?
+
+459
+00:42:37.760 --> 00:42:44.350
+Albert: No, I just need to click on that to make sure I have a mark that this patient has sent, or we already sent a notification.
+
+460
+00:42:44.350 --> 00:42:52.210
+Zaki Mahomed: We could save you a click on that, too. Like, we could just… this could just roll into this agent, like, this is another point of communication, proactive communication, that we just happened to.
+
+461
+00:42:52.210 --> 00:42:52.540
+Albert: Yeah.
+
+462
+00:42:52.540 --> 00:43:09.290
+Zaki Mahomed: ourselves. Okay, cool, good to know. So, you know, I'll… when we… yeah, that could be a candidate. Let's keep moving. I'd love to, like… I'd love to find, like… okay, so the… just… just to be clear, you have this… that's the first… I don't fill out, you know, we join, and then we don't fill out our intake form.
+
+463
+00:43:09.400 --> 00:43:11.849
+Zaki Mahomed: And you're reminding them? That sounds good.
+
+464
+00:43:11.850 --> 00:43:12.770
+Albert: automation, you have.
+
+465
+00:43:12.770 --> 00:43:14.869
+Zaki Mahomed: That's the first piece, that's the first step.
+
+466
+00:43:14.920 --> 00:43:34.269
+Zaki Mahomed: we can find tweaks on how often we remind them, and when we remind them, and you're triggering that through… that goes out through Telescope, right? That's perfect. We'll just… we can automate that. That sheet, can you… like, every order goes on that sheet automatically, and then you're just, like, cross-referencing off it? Wouldn't that just go to Telescope? Like, wouldn't this be available… why is this not in telescope? And this would probably…
+
+467
+00:43:35.640 --> 00:43:36.210
+Albert: I didn't.
+
+468
+00:43:36.210 --> 00:43:37.359
+Chandler Woodward: It's not integrated.
+
+469
+00:43:37.930 --> 00:43:45.939
+Zaki Mahomed: Okay, cool. And how are you matching the order from telescope to email, right? That's what you're using? Yeah. Perfect, that's an easy lookup, sounds good.
+
+470
+00:43:46.260 --> 00:43:47.320
+Zaki Mahomed: Wonderful.
+
+471
+00:43:47.320 --> 00:43:57.300
+Chandler Woodward: I guess, Albert, could we do the… do we have to keep using this one, or can we use the Shopify fulfilled or not fulfilled
+
+472
+00:43:57.480 --> 00:43:59.740
+Chandler Woodward: thing. I guess it's just because the intake… we need that intake.
+
+473
+00:43:59.740 --> 00:44:00.620
+Zaki Mahomed: Yeah, cause you're like.
+
+474
+00:44:00.620 --> 00:44:01.220
+Chandler Woodward: That's why we have…
+
+475
+00:44:01.220 --> 00:44:08.709
+Zaki Mahomed: step… step functions in the middle, right? Like, the step is intake filled or not. So I assume Shopify just updates at the end when the whole order is filled.
+
+476
+00:44:09.110 --> 00:44:09.740
+Chandler Woodward: Yeah.
+
+477
+00:44:09.740 --> 00:44:16.180
+Zaki Mahomed: There's a CRM inside Shopify, but, like, I feel like I would like to make minimal changes to, like, I just want to make your lives easier, not harder, too, while being.
+
+478
+00:44:16.180 --> 00:44:16.520
+Chandler Woodward: Sure.
+
+479
+00:44:16.520 --> 00:44:34.709
+Zaki Mahomed: customer support, so, like, we can keep the process similar to what you're doing right now. We'll look up the sheet, and then the sheet still exists, it can keep going, but now Albert just has to, like, not do the reminders, it just happens automatically. And so I think that would be… and then, you know, if we change that CRM to be something else in the future, that could be easy to point to that.
+
+480
+00:44:34.750 --> 00:44:39.739
+Zaki Mahomed: Albert, so, like, coming back to the, you know, the screen sharing that you… that we want you to do.
+
+481
+00:44:39.950 --> 00:44:46.330
+Zaki Mahomed: Let's find an order that's delayed on the nursing side into the scope and see what that looks like. Is there any?
+
+482
+00:44:46.730 --> 00:44:48.639
+Zaki Mahomed: Like, where, like, greater than X date?
+
+483
+00:44:48.640 --> 00:44:49.000
+Albert: Warren.
+
+484
+00:44:49.000 --> 00:44:50.629
+Zaki Mahomed: the nurse has not done in tick.
+
+485
+00:44:50.990 --> 00:45:05.570
+Albert: let's see here, hang on, I do have some, couple here, because what we… we do have, especially in WellSync, we do have a two-day processing. We… we are waiting for two business days for the tracking number.
+
+486
+00:45:05.570 --> 00:45:05.920
+Zaki Mahomed: Sorry.
+
+487
+00:45:05.920 --> 00:45:06.320
+Albert: Generate.
+
+488
+00:45:06.320 --> 00:45:21.859
+Zaki Mahomed: This is, again, probably a very dumb question on my part, because, you know, I'm learning about your business. Wellsing comes later. Let's talk about the nursing bit in the middle, right? And so, like, I'm talking about delays at the nursing side, where I filled out my intake form, but no nurse has reviewed my application.
+
+489
+00:45:21.860 --> 00:45:22.660
+Chandler Woodward: Yeah, like…
+
+490
+00:45:22.860 --> 00:45:32.289
+Chandler Woodward: The one… send them some of those names that you sent me, Albert, of, like, that Dr. Antonio… Nurse Antonio still hasn't, like, approved.
+
+491
+00:45:32.620 --> 00:45:41.720
+Zaki Mahomed: Yeah. Oh, okay. No decision, and has been more than X amount of time after intake form is filled, right? Like, that's the… the logic that we're going after here, I think.
+
+492
+00:45:42.300 --> 00:45:45.920
+Albert: Okay, let me find, something here.
+
+493
+00:45:46.480 --> 00:45:51.380
+Zaki Mahomed: Because I want to avoid, generally, I want to avoid situations where you're like, Hey…
+
+494
+00:45:51.500 --> 00:45:57.499
+Zaki Mahomed: no intake form, and then there's a reason, too, that the intake… it hasn't been approved, so, like, I think it's important to, like, parse that out.
+
+495
+00:45:57.500 --> 00:45:58.250
+Chandler Woodward: Yeah.
+
+496
+00:46:00.090 --> 00:46:00.830
+Albert: So, I…
+
+497
+00:46:00.830 --> 00:46:04.190
+Zaki Mahomed: missing ID, I see as a reason, for sure, already on the list.
+
+498
+00:46:04.980 --> 00:46:05.390
+Chandler Woodward: Right.
+
+499
+00:46:05.390 --> 00:46:07.789
+Albert: Let me checklist.
+
+500
+00:46:09.690 --> 00:46:15.090
+Albert: I'm going to check if there's any here, because I'm doing it in a weekly basis.
+
+501
+00:46:15.420 --> 00:46:22.069
+Chandler Woodward: Can you filter… you should be able to filter, like, in telescope, right?
+
+502
+00:46:22.180 --> 00:46:29.819
+Chandler Woodward: Nurse Antonio's tickets, and just go to, like, the ones that are, like, the latest. They'll still have not been enough, completed, right?
+
+503
+00:46:29.940 --> 00:46:30.730
+Zaki Mahomed: sort background.
+
+504
+00:46:30.730 --> 00:46:31.980
+Albert: Oh, the ticket loader.
+
+505
+00:46:32.600 --> 00:46:33.150
+Chandler Woodward: Yeah, yeah.
+
+506
+00:46:33.730 --> 00:46:34.530
+Albert: Hang on.
+
+507
+00:46:35.800 --> 00:46:40.759
+Chandler Woodward: Their tickets, then filter by… Owner of Antonio.
+
+508
+00:46:45.500 --> 00:46:51.090
+Albert: Let's see here… For some reason, it's not opening in my input.
+
+509
+00:46:51.340 --> 00:46:53.839
+Albert: Let's see here. Okay, so this.
+
+510
+00:46:55.400 --> 00:46:58.820
+Albert: So, let's go down…
+
+511
+00:46:59.890 --> 00:47:01.290
+Chandler Woodward: Like, the last…
+
+512
+00:47:02.230 --> 00:47:04.900
+Albert: Hmm… D?
+
+513
+00:47:04.900 --> 00:47:08.189
+Zaki Mahomed: Show me the stages in the… the options in the stage fields?
+
+514
+00:47:09.410 --> 00:47:10.360
+Albert: Which one?
+
+515
+00:47:10.840 --> 00:47:12.500
+Chandler Woodward: Oh, stages?
+
+516
+00:47:13.090 --> 00:47:13.640
+Zaki Mahomed: Yeah.
+
+517
+00:47:14.730 --> 00:47:15.570
+Albert: Hang on.
+
+518
+00:47:15.710 --> 00:47:16.500
+Albert: For the year.
+
+519
+00:47:16.500 --> 00:47:17.630
+Chandler Woodward: the…
+
+520
+00:47:25.070 --> 00:47:30.330
+Albert: Hmm, I… I didn't see… I'm actually doing it on a manual basis.
+
+521
+00:47:30.710 --> 00:47:41.900
+Albert: Because, you know, it's not showing… sometimes I'm not seeing the intake here, so I need to go onto Telescope and check if the patient already sent an intake.
+
+522
+00:47:43.260 --> 00:47:43.970
+Zaki Mahomed: Interesting.
+
+523
+00:47:43.970 --> 00:47:44.789
+Albert: I don't have to…
+
+524
+00:47:44.790 --> 00:47:49.819
+Zaki Mahomed: that. Show me… can you show me the stages on the… in the third column? Just hit that drop-down button, I want to see.
+
+525
+00:47:50.190 --> 00:47:51.430
+Albert: Which one? Here.
+
+526
+00:47:51.430 --> 00:47:53.370
+Zaki Mahomed: stage, the third column.
+
+527
+00:47:53.370 --> 00:47:54.070
+Albert: Sorry.
+
+528
+00:47:54.610 --> 00:47:57.699
+Zaki Mahomed: Just pick any one of the rows and show me the options you have in there.
+
+529
+00:47:57.700 --> 00:47:58.450
+Chandler Woodward: We'll just, like.
+
+530
+00:47:58.660 --> 00:48:00.660
+Albert: Oh, sure. In progress.
+
+531
+00:48:00.660 --> 00:48:01.210
+Zaki Mahomed: booked.
+
+532
+00:48:01.410 --> 00:48:10.309
+Zaki Mahomed: Can you sort these? I guess, like, I mean, if we can add a filter on this, on, like, if you… on the top right, if you can add a filter here…
+
+533
+00:48:10.900 --> 00:48:14.650
+Zaki Mahomed: Try loading that, let's find intake complete, and…
+
+534
+00:48:15.090 --> 00:48:26.300
+Zaki Mahomed: just sort for knowledge, like, sort by oldest, right? That should give us the problem, like, at this stage, because I feel like there's probably a lot of, like, decision-making that's actually happening over here that we need to really unpack and unlock.
+
+535
+00:48:29.000 --> 00:48:29.560
+Albert: Yeah.
+
+536
+00:48:32.880 --> 00:48:37.899
+Albert: So, this is not started… I think the date…
+
+537
+00:48:40.050 --> 00:48:57.609
+Zaki Mahomed: Okay, let's pause on this. I want to see the well-sync side. We're running out of time, so I want to make sure that we actually capture… I feel like there might be, like, some questions I have for you, Albert. Maybe as a follow-up to this, if you can show me… I'd like to see specifically, like, if you can fever record your screen and share it with me as an email with this group, but I'd like to see…
+
+538
+00:48:57.680 --> 00:49:15.070
+Zaki Mahomed: this nursing site, like, I want to see how you pull up in Telescope the list that you just sent, right? Manually. Like, I want to understand how that looks like inside the app, because if you can't… we have to figure out all the different ways you're pulling that list together. It might be, like, I'm doing these three things, I'm looking at folks that
+
+539
+00:49:15.070 --> 00:49:22.450
+Zaki Mahomed: have an order set up in Shopify and has not shipped, but I want to see what that looks like inside Telescope, if that makes sense.
+
+540
+00:49:22.450 --> 00:49:22.769
+Albert: Oh, okay.
+
+541
+00:49:22.770 --> 00:49:40.529
+Zaki Mahomed: inside Shopify, wherever you're getting it from. So if you can take that as, like, a takeaway from this, like, we can, like, come back to, send me that, like, record your screen and show me what those filters look like, how you put that list together, and it could be two or three things, that's cool. Let's go to the pharmacy side. I want to see that third piece, like, we've got two points of connection here.
+
+542
+00:49:40.810 --> 00:49:42.700
+Zaki Mahomed: Let's look at what…
+
+543
+00:49:44.560 --> 00:49:45.640
+Albert: Here.
+
+544
+00:49:45.890 --> 00:49:56.429
+Albert: Here is the WellSync. So, what we are doing is we are ordering two, medication, GLP-1 and ivermectin, longevity. The…
+
+545
+00:49:56.850 --> 00:49:57.170
+Albert: here.
+
+546
+00:49:57.170 --> 00:49:58.180
+Jon Matzner: Horse dewormer?
+
+547
+00:49:59.320 --> 00:50:00.279
+Jon Matzner: I'm just kidding.
+
+548
+00:50:00.520 --> 00:50:03.299
+Rafaela Mae Galupo: It's a joke in COVID, right?
+
+549
+00:50:03.300 --> 00:50:04.140
+Jon Matzner: Sorry.
+
+550
+00:50:04.140 --> 00:50:15.430
+Zaki Mahomed: Tell me, tell me about, like, if we can identify an order that's delayed and not filled, that would require, like, in telescope, and then we can look it up in the pharmacy, that would be, like, I think, ideal.
+
+551
+00:50:15.570 --> 00:50:17.430
+Albert: Yeah, sure, hang on.
+
+552
+00:50:17.710 --> 00:50:24.070
+Albert: So, what I'm doing here is I'm, of course, filtering everything in my end.
+
+553
+00:50:25.300 --> 00:50:37.719
+Albert: Okay, so I can check what are the medication that has been shipped out. So here are… it's not actually a delay, but what I'm doing is I'm getting the email, and then checking it here.
+
+554
+00:50:37.860 --> 00:50:40.899
+Albert: And see if there's any tracking generated.
+
+555
+00:50:41.040 --> 00:50:43.060
+Albert: Yeah, so for this one, we already have.
+
+556
+00:50:43.060 --> 00:50:43.660
+Zaki Mahomed: Nice.
+
+557
+00:50:45.050 --> 00:50:46.650
+Albert: Tracking number already.
+
+558
+00:50:47.040 --> 00:50:49.760
+Albert: So, again, we have, 2 days.
+
+559
+00:50:52.060 --> 00:50:55.530
+Albert: Period for us to notify if the tracking…
+
+560
+00:50:55.530 --> 00:51:00.020
+Zaki Mahomed: Can you go back to that list again, and show me, is there anyone that actually delayed greater than 2 days?
+
+561
+00:51:00.300 --> 00:51:10.469
+Albert: Right now, I'm actually checking it from time to time, so we are up to date with regards to order, so let me check the other shipment. Hang on.
+
+562
+00:51:13.520 --> 00:51:27.419
+Albert: let's go with the Zepatide, so… So for this one, the order date… we're actually up to date, the order is the 31st of, March, so right now, we don't have any delays in orders.
+
+563
+00:51:28.740 --> 00:51:32.900
+Albert: Yeah, for example, this one, I did just send it today.
+
+564
+00:51:33.400 --> 00:51:34.160
+Albert: Hang on.
+
+565
+00:51:34.700 --> 00:51:35.429
+Albert: Pulling up.
+
+566
+00:51:36.500 --> 00:51:38.480
+Zaki Mahomed: What we could just do is bring…
+
+567
+00:51:39.050 --> 00:51:43.930
+Chandler Woodward: There should be a way, too, though, right? Like, this is so much of your time, Albert, of, like.
+
+568
+00:51:44.160 --> 00:51:48.780
+Chandler Woodward: Going in, grabbing this information, like, the agent can go and grab this stuff too, right?
+
+569
+00:51:48.780 --> 00:51:51.299
+Zaki Mahomed: Exactly. We'll just bring the tracking link in here for you.
+
+570
+00:51:51.300 --> 00:51:52.100
+Chandler Woodward: Yeah.
+
+571
+00:51:52.540 --> 00:52:07.779
+Albert: Yeah, what I'm doing is, I'm covering this email address, and then go to Shopify, and then, just send it to the patient, and they will gonna receive it via email. I just, you know, mark it as fulfilled, and then.
+
+572
+00:52:07.780 --> 00:52:14.300
+Zaki Mahomed: Is that how you add the tracking numbers? So you basically just add it to Shopify, and then it sends an email automatically?
+
+573
+00:52:14.470 --> 00:52:15.659
+Albert: That's right, exactly.
+
+574
+00:52:15.870 --> 00:52:29.070
+Zaki Mahomed: Amazing. Excellent. So what we could just do is, like, grab the track… check, like, 4 times a day, right? And grab the tracking number in real time, we don't have to wait 2 days, bring that in, throw that on this sheet, and add it to Shopify, and go, like.
+
+575
+00:52:29.490 --> 00:52:31.010
+Zaki Mahomed: Hit the check mark, right?
+
+576
+00:52:31.010 --> 00:52:31.580
+Albert: Yeah.
+
+577
+00:52:31.580 --> 00:52:32.380
+Chandler Woodward: That'd be awesome.
+
+578
+00:52:32.520 --> 00:52:49.060
+Zaki Mahomed: Yeah, I think that's the ideal move. Okay, so I guess, like, to summarize and wrap up, we've got great agent idea, right? I think it has a big business impact for you guys. We can… we have delay in… we won't do anything, or we won't do too much on…
+
+579
+00:52:49.240 --> 00:52:56.899
+Zaki Mahomed: the delay in intake yet. I guess, like, we should… we could do something over there, too. We haven't really, like, nailed that down.
+
+580
+00:52:57.370 --> 00:53:05.599
+Zaki Mahomed: But it could be a touchpoint on, like, hey, here's a delay in intake, that's happening, that's, you know, the manual notification we're sending out, right? Trigger that.
+
+581
+00:53:05.760 --> 00:53:16.249
+Zaki Mahomed: trigger the nurse… the nurse notification as well, if they don't, you know, and that can be manual, right? Like, hey, we need to nudge them to, like, on this order, and then the main…
+
+582
+00:53:16.620 --> 00:53:31.729
+Zaki Mahomed: delivery that we do on the flip side is on shipment. We check a few times a day to make sure that as soon as the order tracking is updated, we bring that into Sheep, so we record the tracking number we grabbed for Albert, and then throw that into Shopify and trigger that notification out to the customer, too.
+
+583
+00:53:31.930 --> 00:53:40.340
+Zaki Mahomed: Do you just grab the tracking number and throw it in? Do you gotta, like, tell them, like, hey, this is FedEx, this is UPS, or is it just, hey, throw any number in, it'll figure it out, and so on?
+
+584
+00:53:40.340 --> 00:53:41.790
+Albert: Whenever they make, like.
+
+585
+00:53:41.790 --> 00:53:42.510
+Chandler Woodward: marital.
+
+586
+00:53:42.760 --> 00:53:43.599
+Zaki Mahomed: Okay, we'll figure it out, right?
+
+587
+00:53:43.600 --> 00:53:46.489
+Albert: It will show UPS or FedEx.
+
+588
+00:53:47.130 --> 00:53:48.170
+Zaki Mahomed: Okay, perfect.
+
+589
+00:53:48.170 --> 00:53:49.219
+Chandler Woodward: A tracking number, yes.
+
+590
+00:53:49.430 --> 00:53:49.960
+Albert: Actually.
+
+591
+00:53:49.960 --> 00:53:56.320
+Zaki Mahomed: Can you show me, can you take that first order that we had a tracking number for, and show me what that looks like in Shopify, so that the agent has a record of this?
+
+592
+00:53:57.550 --> 00:53:58.120
+Zaki Mahomed: Okay.
+
+593
+00:53:58.120 --> 00:54:05.970
+Albert: Yeah, whenever you click that, it… you'll go directly to, to FedEx or UPS.
+
+594
+00:54:06.150 --> 00:54:10.999
+Zaki Mahomed: Interesting. Oh, like, this is an example where… okay, yeah, that's older, that's cool.
+
+595
+00:54:11.390 --> 00:54:23.189
+Zaki Mahomed: I wanna… I wanna see you update this… the number we'd found that was, like, open, like, had not been updated in Shopify yet. If you can update that in Shopify, I want to see what the… what options it gives you after you add the tracking number in.
+
+596
+00:54:24.120 --> 00:54:32.880
+Albert: Well, no, just whenever I mark it as fulfilled, then there's no option. They're just gonna send it directly to the patient, via email.
+
+597
+00:54:33.340 --> 00:54:33.660
+Zaki Mahomed: Okay.
+
+598
+00:54:33.660 --> 00:54:36.910
+Chandler Woodward: You think you went to see… you want to see, kind of, it's like,
+
+599
+00:54:37.060 --> 00:54:44.629
+Chandler Woodward: Right, that one, the NAD one you just showed, that had the tracking number, the FedEx one? Can you just show them what that looks like? So just…
+
+600
+00:54:45.800 --> 00:54:50.800
+Albert: Yeah, we can just cancel fulfillment, and then I'll go… I'm gonna go ahead and resend it for you. Hang on.
+
+601
+00:54:51.420 --> 00:54:52.670
+Albert: It will be easy.
+
+602
+00:54:53.560 --> 00:54:58.470
+Albert: I just… One sec.
+
+603
+00:54:59.920 --> 00:55:06.649
+Albert: So, let's grab a shipment here. So, for example… Here, Alicia.
+
+604
+00:55:07.640 --> 00:55:10.630
+Albert: So, I'm gonna go ahead and check…
+
+605
+00:55:11.550 --> 00:55:20.740
+Albert: Patient's name, and so there's the tracking number generated, so… Gonna put it here… Let's remove…
+
+606
+00:55:21.400 --> 00:55:23.800
+Albert: And then I'll go to Shopify.
+
+607
+00:55:25.350 --> 00:55:29.009
+Albert: And then whenever I go to Shopify, so let's say we haven't fulfilled this.
+
+608
+00:55:29.130 --> 00:55:33.209
+Albert: order yet, so what I can do is just cancel the fulfillment.
+
+609
+00:55:34.460 --> 00:55:36.920
+Albert: So, just cancel the fulfillment.
+
+610
+00:55:37.150 --> 00:55:56.100
+Albert: So, something like that. So, yeah, there you go. So that's, that's what you see if there's no tracking number available yet. But if there's any tracking available, I'm gonna go ahead and copy the tracking number, and then mark this as fulfilled, and then here, then carrier, FedEx, and then mark it as fulfilled.
+
+611
+00:55:56.250 --> 00:56:04.860
+Albert: You can just click or unclick notification if you want the patient to receive it. Obviously, of course, we want to… we want to make sure that the patient will receive the
+
+612
+00:56:04.990 --> 00:56:05.620
+Albert: The map.
+
+613
+00:56:05.620 --> 00:56:08.380
+Zaki Mahomed: button for that? Sorry, can you show me the button for notification?
+
+614
+00:56:08.780 --> 00:56:09.460
+Albert: Sure.
+
+615
+00:56:09.460 --> 00:56:10.170
+Zaki Mahomed: UI.
+
+616
+00:56:10.330 --> 00:56:11.059
+Zaki Mahomed: In Shopify.
+
+617
+00:56:11.060 --> 00:56:14.880
+Albert: Here, marked as fulfilled, so let's cancel it again. It's okay.
+
+618
+00:56:15.180 --> 00:56:17.989
+Zaki Mahomed: Okay, that's in the… that's in the… that was in the flow that you…
+
+619
+00:56:18.170 --> 00:56:18.870
+Albert: Yep, here.
+
+620
+00:56:19.290 --> 00:56:20.420
+Albert: Signification.
+
+621
+00:56:20.420 --> 00:56:28.840
+Zaki Mahomed: Sounds good, sounds good, perfect. All right, cool. One last question, and then I think I have enough over here to, to rock with.
+
+622
+00:56:29.710 --> 00:56:44.579
+Zaki Mahomed: do you guys… like, what position should we take? Now that we understand a little bit better, right? There's, like, hey, this is, like, core operational workflow, making it faster and smoother, and making it less like, you know, just grabbing the shipping number, putting it in. I can see that easy.
+
+623
+00:56:44.580 --> 00:57:06.480
+Zaki Mahomed: Do you guys want us to also communicate when, like, a delay happens, or when we, like, you know, hey, shipping is late, or whatever? Should we just… should we… the original idea was to, like, communicate with the customer and, like, be proactive about the… about the comms, too? Should we still do that? I feel like we have, like, level one of this might just be building this out to make it faster internally, right, before we start doing proactive stuff.
+
+624
+00:57:06.620 --> 00:57:07.440
+Zaki Mahomed: Right?
+
+625
+00:57:08.250 --> 00:57:09.210
+Zaki Mahomed: Yeah.
+
+626
+00:57:09.710 --> 00:57:16.710
+Zaki Mahomed: Cool. I think I have enough over here to spec this out. What I'm gonna do next, is I'm gonna, like, use this transcript.
+
+627
+00:57:16.980 --> 00:57:35.520
+Zaki Mahomed: I think we captured everything we needed over here, so I'll put together, like, a spec talk, here's what the agent's going to do for you guys, very specifically, and, like, 3 or 4 bullet points. Send that to you guys in an email, look for that by tomorrow, and then give us a thumbs up on it, and then we start your builds, and we get a prototype to you as early as next week, and it goes pretty quick.
+
+628
+00:57:35.520 --> 00:57:36.509
+Chandler Woodward: That was awesome.
+
+629
+00:57:36.510 --> 00:57:37.170
+Zaki Mahomed: Fine.
+
+630
+00:57:37.520 --> 00:57:38.550
+Chandler Woodward: Let's go!
+
+631
+00:57:38.930 --> 00:57:42.400
+Zaki Mahomed: Okay, let's do it. Thank you so much for the time, really appreciate it.
+
+632
+00:57:42.590 --> 00:57:43.090
+Jon Matzner: Weird.
+
+633
+00:57:43.340 --> 00:57:48.890
+Jon Matzner: Chandler and Raleigh, just so you guys know, idea here is if this works, game on, right?
+
+634
+00:57:49.030 --> 00:57:52.360
+Jon Matzner: We'll just start looking at other LEGO bricks, 500 bucks.
+
+635
+00:57:52.690 --> 00:57:53.810
+Jon Matzner: Yeah. If it works, right?
+
+636
+00:57:53.810 --> 00:57:57.590
+Zaki Mahomed: We can do the proactive thing, we can do, like, this whole… we can do the, you know…
+
+637
+00:57:57.590 --> 00:57:58.649
+Jon Matzner: Upsell, upsell.
+
+638
+00:57:58.990 --> 00:58:00.019
+Jon Matzner: I mean, we're…
+
+639
+00:58:00.020 --> 00:58:03.570
+Zaki Mahomed: Affiliate is something we flagged already, so I'll have a list of it. Yeah, cool, totally.
+
+640
+00:58:03.850 --> 00:58:05.690
+Jon Matzner: Cool, that's the idea. Alright, later guys.
+
+641
+00:58:06.050 --> 00:58:07.180
+Chandler Woodward: Thanks, guys. Back to you guys.
+

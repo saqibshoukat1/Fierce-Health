@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flagged Orders — Fierce Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="data.js"></script>
+  <link rel="stylesheet" href="theme.css" />
+  <style>
+    @keyframes slide-in {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slide-out {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
+    .toast-in { animation: slide-in 0.3s ease forwards; }
+    .toast-out { animation: slide-out 0.3s ease forwards; }
+    @keyframes fade-remove {
+      from { opacity: 1; transform: scale(1); max-height: 200px; }
+      to { opacity: 0; transform: scale(0.96); max-height: 0; margin: 0; padding: 0; }
+    }
+    .removing { animation: fade-remove 0.35s ease forwards; overflow: hidden; }
+  </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-slate-100">
+
+  <!-- Navbar -->
+  <nav class="bg-slate-900/95 border-b border-slate-800 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-lg backdrop-blur">
+    <a href="index.html" class="flex items-center gap-2">
+      <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+      <span class="font-bold text-lg tracking-tight">Fierce Health</span>
+      <span class="text-slate-400 font-normal text-sm ml-1">— Fulfillment Autopilot</span>
+    </a>
+    <div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium">
+      <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Dashboard</a>
+      <a href="audit-log.html" class="text-slate-300 hover:text-white transition-colors">Audit Log</a>
+      <a href="flags.html" class="text-white border-b-2 border-emerald-400 pb-0.5">Flags</a>
+      <button id="theme-toggle" onclick="toggleTheme()" class="text-xs px-2.5 py-1 rounded border border-slate-700 text-slate-300 hover:text-white">Light</button>
+    </div>
+  </nav>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed top-6 right-6 z-50 hidden">
+    <div id="toast-inner" class="bg-amber-600 text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 text-sm font-medium">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+      </svg>
+      <span id="toast-msg">Escalation flagged internally</span>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-white">Flag Queue</h1>
+      <p class="text-slate-400 mt-1 text-sm">SLA breaches and pending clinical approvals requiring action.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-6 border-b border-slate-800">
+      <button
+        id="tab-pharmacy"
+        onclick="switchTab('pharmacy')"
+        class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-rose-400 text-rose-300 -mb-px transition-colors"
+      >
+        <span class="flex items-center gap-2">
+          <span id="pharmacy-count" class="w-5 h-5 bg-rose-500 text-white rounded-full text-xs flex items-center justify-center font-bold">2</span>
+          Pharmacy Delays
+        </span>
+      </button>
+      <button
+        id="tab-nurse"
+        onclick="switchTab('nurse')"
+        class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 -mb-px transition-colors"
+      >
+        <span class="flex items-center gap-2">
+          <span id="nurse-count" class="w-5 h-5 bg-amber-500 text-white rounded-full text-xs flex items-center justify-center font-bold">2</span>
+          Nurse Approval Pending
+        </span>
+      </button>
+    </div>
+
+    <!-- Pharmacy Delays Tab -->
+    <div id="panel-pharmacy" class="space-y-4">
+      <!-- rendered by JS -->
+    </div>
+
+    <!-- Nurse Pending Tab -->
+    <div id="panel-nurse" class="space-y-4 hidden">
+      <!-- rendered by JS -->
+    </div>
+
+    <!-- Empty state (shown when all cards removed) -->
+    <div id="empty-pharmacy" class="hidden text-center py-16">
+      <svg class="w-12 h-12 text-green-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <p class="text-gray-500 font-medium">All pharmacy delays resolved</p>
+    </div>
+    <div id="empty-nurse" class="hidden text-center py-16">
+      <svg class="w-12 h-12 text-green-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <p class="text-gray-500 font-medium">No pending nurse approvals</p>
+    </div>
+
+  </main>
+
+  <script>
+    function applyTheme(theme) {
+      document.body.classList.toggle('light-theme', theme === 'light');
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.textContent = theme === 'light' ? 'Dark' : 'Light';
+    }
+    function initTheme() {
+      applyTheme(localStorage.getItem('fh-theme') || 'dark');
+    }
+    function toggleTheme() {
+      const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+      localStorage.setItem('fh-theme', next);
+      applyTheme(next);
+    }
+    initTheme();
+
+    const pharmacyOrders = ORDERS.filter(o => o.status === 'PHARMACY_DELAYED');
+    const nurseOrders = ORDERS.filter(o => o.status === 'NURSE_PENDING');
+
+    function renderPharmacyCards() {
+      const panel = document.getElementById('panel-pharmacy');
+      panel.innerHTML = '';
+      pharmacyOrders.forEach(order => {
+        const card = document.createElement('div');
+        card.id = `card-${order.id}`;
+        card.className = 'bg-slate-900 rounded-xl shadow-md border border-rose-900 p-6';
+        card.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span class="font-bold text-slate-100">${order.id}</span>
+                <span class="text-slate-500">·</span>
+                <span class="text-slate-300 font-medium">${order.patient}</span>
+                <span class="text-slate-500">·</span>
+                <span class="text-slate-400 text-sm">${order.product}</span>
+              </div>
+              <div class="text-sm text-slate-400 mb-3">
+                Pharmacy: <span class="font-medium text-slate-200">${order.pharmacy}</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm mb-3">
+                <div class="flex items-center gap-2 text-slate-400">
+                  <svg class="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  Sent to pharmacy: <span class="font-medium">${order.sentToPharmacy}</span>
+                </div>
+                <div class="flex items-center gap-2 text-rose-300 font-medium">
+                  <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Days without tracking: ${order.daysStuck} days
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-xs text-rose-300 font-semibold bg-rose-950/40 border border-rose-900 rounded-lg px-3 py-1.5 w-fit">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+                Exceeds 2-day SLA
+              </div>
+            </div>
+            <div class="flex sm:flex-col gap-2 sm:items-end flex-shrink-0">
+              <button
+                onclick="resolveCard('${order.id}', 'pharmacy')"
+                class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                Mark Resolved
+              </button>
+              <a
+                href="order-detail.html?id=${order.id}"
+                class="bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm font-medium px-4 py-2 rounded-lg transition-colors text-center"
+              >
+                View Order
+              </a>
+            </div>
+          </div>
+        `;
+        panel.appendChild(card);
+      });
+    }
+
+    function renderNurseCards() {
+      const panel = document.getElementById('panel-nurse');
+      panel.innerHTML = '';
+      nurseOrders.forEach(order => {
+        const card = document.createElement('div');
+        card.id = `card-${order.id}`;
+        card.className = 'bg-slate-900 rounded-xl shadow-md border border-amber-900 p-6';
+        card.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span class="font-bold text-slate-100">${order.id}</span>
+                <span class="text-slate-500">·</span>
+                <span class="text-slate-300 font-medium">${order.patient}</span>
+                <span class="text-slate-500">·</span>
+                <span class="text-slate-400 text-sm">${order.product}</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm mb-3 mt-2">
+                <div class="flex items-center gap-2 text-slate-400">
+                  <svg class="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Intake submitted: <span class="font-medium">${order.intakeSubmitted}</span>
+                </div>
+                <div class="flex items-center gap-2 text-amber-300 font-medium">
+                  <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Pending for ${order.nursePendingDays} days
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 text-xs text-amber-300 font-semibold bg-amber-950/30 border border-amber-900 rounded-lg px-3 py-1.5 w-fit">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+                Exceeds ${APP_CONTEXT.thresholds.nurseApprovalDays}-day approval threshold
+              </div>
+            </div>
+            <div class="flex sm:flex-col gap-2 sm:items-end flex-shrink-0">
+              <button
+                onclick="escalate('${order.id}')"
+                class="bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+              >
+                Escalate to ${order.assignedNurse}
+              </button>
+              <a
+                href="order-detail.html?id=${order.id}"
+                class="bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm font-medium px-4 py-2 rounded-lg transition-colors text-center"
+              >
+                View Order
+              </a>
+            </div>
+          </div>
+        `;
+        panel.appendChild(card);
+      });
+    }
+
+    function resolveCard(orderId, type) {
+      const card = document.getElementById(`card-${orderId}`);
+      card.classList.add('removing');
+      card.addEventListener('animationend', () => {
+        card.remove();
+        const remaining = document.querySelectorAll(`#panel-pharmacy .rounded-xl`);
+        if (remaining.length === 0) {
+          document.getElementById('empty-pharmacy').classList.remove('hidden');
+        }
+      }, { once: true });
+    }
+
+    function escalate(orderId) {
+      showToast('Escalation flagged internally');
+    }
+
+    function switchTab(tab) {
+      const panels = { pharmacy: 'panel-pharmacy', nurse: 'panel-nurse' };
+      const empties = { pharmacy: 'empty-pharmacy', nurse: 'empty-nurse' };
+      const tabs = { pharmacy: 'tab-pharmacy', nurse: 'tab-nurse' };
+      const colors = { pharmacy: ['border-rose-400', 'text-rose-300'], nurse: ['border-amber-500', 'text-amber-300'] };
+
+      Object.keys(panels).forEach(key => {
+        document.getElementById(panels[key]).classList.toggle('hidden', key !== tab);
+        document.getElementById(empties[key]).classList.add('hidden');
+        const btn = document.getElementById(tabs[key]);
+        btn.classList.toggle('border-transparent', key !== tab);
+        btn.classList.toggle('text-slate-400', key !== tab);
+        colors[key].forEach(cls => btn.classList.toggle(cls, key === tab));
+      });
+
+      // Show empty if no cards in current tab
+      const panel = document.getElementById(panels[tab]);
+      if (panel.children.length === 0) {
+        document.getElementById(empties[tab]).classList.remove('hidden');
+      }
+    }
+
+    function showToast(msg, color = 'amber') {
+      const toast = document.getElementById('toast');
+      const inner = document.getElementById('toast-inner');
+      document.getElementById('toast-msg').textContent = msg;
+      inner.className = `bg-amber-600 text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 text-sm font-medium`;
+      toast.classList.remove('hidden');
+      inner.classList.add('toast-in');
+      setTimeout(() => {
+        inner.classList.remove('toast-in');
+        inner.classList.add('toast-out');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          inner.classList.remove('toast-out');
+        }, 300);
+      }, 3000);
+    }
+
+    document.getElementById('pharmacy-count').textContent = pharmacyOrders.length;
+    document.getElementById('nurse-count').textContent = nurseOrders.length;
+    renderPharmacyCards();
+    renderNurseCards();
+  </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Detail — Fierce Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="data.js"></script>
+  <link rel="stylesheet" href="theme.css" />
+  <style>
+    @keyframes slide-in { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes slide-out { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
+    .toast-in { animation: slide-in 0.3s ease forwards; }
+    .toast-out { animation: slide-out 0.3s ease forwards; }
+  </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-slate-100">
+  <nav class="bg-slate-900/95 border-b border-slate-800 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-lg backdrop-blur">
+    <a href="index.html" class="flex items-center gap-2">
+      <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+      <span class="font-bold text-lg tracking-tight">Fierce Health</span>
+      <span class="text-slate-400 font-normal text-sm ml-1">— Fulfillment Autopilot</span>
+    </a>
+    <div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium">
+      <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Dashboard</a>
+      <a href="audit-log.html" class="text-slate-300 hover:text-white transition-colors">Audit Log</a>
+      <a href="flags.html" class="text-slate-300 hover:text-white transition-colors">Flags</a>
+      <button id="theme-toggle" onclick="toggleTheme()" class="text-xs px-2.5 py-1 rounded border border-slate-700 text-slate-300 hover:text-white">Light</button>
+    </div>
+  </nav>
+
+  <div id="toast" class="fixed top-6 right-6 z-50 hidden">
+    <div id="toast-inner" class="bg-emerald-600 text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 text-sm font-medium">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+      <span id="toast-msg">Copied</span>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+    <div id="not-found" class="hidden bg-slate-900 border border-rose-900 rounded-xl p-6 text-rose-200">
+      Order not found. Return to <a href="index.html" class="text-sky-400 hover:text-sky-300">Dashboard</a>.
+    </div>
+
+    <section id="content" class="hidden space-y-6">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <a href="audit-log.html" class="inline-flex items-center gap-1 text-sm text-sky-400 hover:text-sky-300 mb-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Audit Log
+          </a>
+          <h1 id="title" class="text-2xl font-semibold text-white"></h1>
+          <p id="subtitle" class="text-sm text-slate-400 mt-1"></p>
+        </div>
+        <span id="status-badge" class="inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full"></span>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+        <div class="xl:col-span-3 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+              <div class="text-xs uppercase tracking-wide text-slate-400 mb-4">Before Agent</div>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between"><span class="text-slate-400">Order status</span><span class="text-rose-300">Unfulfilled</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Tracking</span><span class="text-slate-500">Not available</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Carrier</span><span class="text-slate-500">Unknown</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Notify customer</span><span class="text-rose-300">No</span></div>
+              </div>
+            </div>
+            <div class="bg-slate-900 border border-emerald-900 rounded-xl p-5">
+              <div class="text-xs uppercase tracking-wide text-emerald-300 mb-4">Current State</div>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between"><span class="text-slate-400">Order status</span><span id="current-status" class="text-emerald-300"></span></div>
+                <div class="flex justify-between gap-3">
+                  <span class="text-slate-400">Tracking</span>
+                  <span class="text-slate-200 font-mono text-xs text-right"><span id="tracking-text"></span> <button id="copy-btn" class="text-sky-400 hover:text-sky-300">Copy</button></span>
+                </div>
+                <div class="flex justify-between"><span class="text-slate-400">Carrier</span><span id="carrier-text" class="text-slate-200"></span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Notify customer</span><span id="notify-text" class="text-emerald-300">Yes</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+            <h2 class="text-base font-semibold text-slate-100 mb-5">Order Timeline</h2>
+            <div class="relative">
+              <div class="absolute left-4 top-2 bottom-2 w-px bg-slate-700 timeline-connector"></div>
+              <div id="timeline" class="space-y-4"></div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <svg class="w-5 h-5 text-emerald-400 google-sheet-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+              <h2 class="text-base font-semibold text-slate-100">Google Sheet Update</h2>
+              <span class="text-xs text-slate-500 font-mono ml-1">Orders To Fill 2026</span>
+            </div>
+            <p class="text-sm text-slate-400 mb-4">Agent sync preview for this order row.</p>
+            <div class="rounded-lg border border-slate-800 overflow-hidden">
+              <table class="w-full text-xs font-mono table-fixed">
+                <thead class="bg-slate-950 border-b border-slate-800">
+                  <tr class="text-left text-slate-400">
+                    <th class="px-3 py-2.5 font-semibold w-[12%]">Order ID</th>
+                    <th class="px-3 py-2.5 font-semibold w-[16%]">Patient</th>
+                    <th class="px-3 py-2.5 font-semibold w-[26%]">Product</th>
+                    <th class="px-3 py-2.5 font-semibold w-[12%]">Pharmacy</th>
+                    <th class="px-3 py-2.5 font-semibold w-[16%]">Tracking</th>
+                    <th class="px-3 py-2.5 font-semibold w-[8%]">Carrier</th>
+                    <th class="px-3 py-2.5 font-semibold w-[10%]">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="sheet-row-table" class="bg-emerald-950/20 hover:bg-emerald-950/30 transition-colors"></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <aside class="space-y-4 xl:col-span-1">
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            <h3 class="text-sm font-semibold text-slate-100 mb-3">Case Summary</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between"><span class="text-slate-400">Order</span><span id="sum-order" class="text-slate-200"></span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Patient</span><span id="sum-patient" class="text-slate-200"></span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Pharmacy</span><span id="sum-pharmacy" class="text-slate-200"></span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Assigned nurse</span><span id="sum-nurse" class="text-slate-200"></span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Order priority</span><span id="sum-priority" class="text-slate-200"></span></div>
+            </div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            <h3 class="text-sm font-semibold text-slate-100 mb-2">Operational Context</h3>
+            <div class="space-y-2 text-xs text-slate-400">
+              <div class="flex justify-between"><span>Mode</span><span class="text-slate-300">Demo</span></div>
+              <div class="flex justify-between"><span>Poll cadence</span><span class="text-slate-300">4 times/day</span></div>
+              <div class="flex justify-between"><span>Pharmacy SLA</span><span class="text-slate-300">2 business days</span></div>
+              <div class="flex justify-between"><span>Nurse SLA</span><span class="text-slate-300">3 days</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function applyTheme(theme) {
+      document.body.classList.toggle('light-theme', theme === 'light');
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.textContent = theme === 'light' ? 'Dark' : 'Light';
+    }
+    function initTheme() {
+      applyTheme(localStorage.getItem('fh-theme') || 'dark');
+    }
+    function toggleTheme() {
+      const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+      localStorage.setItem('fh-theme', next);
+      applyTheme(next);
+    }
+    initTheme();
+
+    function getOrderIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const inner = document.getElementById('toast-inner');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.remove('hidden');
+      inner.classList.add('toast-in');
+      setTimeout(() => {
+        inner.classList.remove('toast-in');
+        inner.classList.add('toast-out');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          inner.classList.remove('toast-out');
+        }, 300);
+      }, 2000);
+    }
+
+    const orderId = getOrderIdFromUrl() || 'FC-48334';
+    const order = ORDERS.find(o => o.id === orderId);
+    const audit = AUDIT_LOG.find(a => a.orderId === orderId);
+
+    if (!order) {
+      document.getElementById('not-found').classList.remove('hidden');
+    } else {
+      document.getElementById('content').classList.remove('hidden');
+      document.title = `Order ${order.id} — Fierce Health`;
+      document.getElementById('title').textContent = `Order ${order.id} — ${order.patient}`;
+      document.getElementById('subtitle').textContent = `${order.product} — ${order.pharmacy}`;
+
+      const isFulfilled = order.status === 'FULFILLED';
+      const badge = document.getElementById('status-badge');
+      badge.className = `inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1.5 rounded-full ${isFulfilled ? 'bg-emerald-900/40 text-emerald-300' : 'bg-amber-900/40 text-amber-300'}`;
+      badge.textContent = isFulfilled ? 'Fulfilled' : order.status.replace('_', ' ');
+
+      document.getElementById('current-status').textContent = isFulfilled ? 'Fulfilled' : 'Pending';
+      document.getElementById('tracking-text').textContent = order.tracking || 'Not available';
+      document.getElementById('carrier-text').textContent = order.carrier || 'Unknown';
+      document.getElementById('notify-text').textContent = audit && audit.notifyCustomer ? 'Yes' : 'No';
+
+      document.getElementById('sum-order').textContent = order.shopifyOrderName;
+      document.getElementById('sum-patient').textContent = order.patientInitials;
+      document.getElementById('sum-pharmacy').textContent = order.pharmacy;
+      document.getElementById('sum-nurse').textContent = order.assignedNurse || 'Unassigned';
+      document.getElementById('sum-priority').textContent = order.priority || 'MEDIUM';
+
+      const sheetRow = document.getElementById('sheet-row-table');
+      sheetRow.innerHTML = `
+        <td class="px-3 py-3 text-slate-100 font-semibold break-words">${order.id}</td>
+        <td class="px-3 py-3 text-slate-300 break-words">${order.patient}</td>
+        <td class="px-3 py-3 text-slate-300 break-words">${order.product}</td>
+        <td class="px-3 py-3 text-slate-300 break-words">${order.pharmacy}</td>
+        <td class="px-3 py-3 text-slate-200 break-all">${order.tracking || '—'}</td>
+        <td class="px-3 py-3 text-slate-300 break-words">${order.carrier || '—'}</td>
+        <td class="px-3 py-3">
+          <span class="px-2 py-0.5 rounded font-semibold ${isFulfilled ? 'bg-emerald-900/50 text-emerald-300' : 'bg-amber-900/50 text-amber-300'}">${order.status}</span>
+        </td>
+      `;
+
+      const timeline = document.getElementById('timeline');
+      const dateDetail = (val, fallback) => val || fallback;
+      const events = [];
+
+      events.push({
+        title: `Order Placed (${order.id})`,
+        detail: `${dateDetail(order.intakeSubmitted, 'Date unavailable')} — Checkout completed in Shopify`,
+        tone: 'sky',
+        icon: 'cart'
+      });
+
+      events.push({
+        title: 'Intake Form Submitted',
+        detail: `${dateDetail(order.intakeSubmitted, 'N/A')} — Patient completed health questionnaire`,
+        tone: 'sky',
+        icon: 'doc'
+      });
+
+      events.push({
+        title: order.nurseApprovedAt ? 'Nurse Approved' : 'Awaiting Nurse Approval',
+        detail: order.nurseApprovedAt
+          ? `${order.nurseApprovedAt} — ${order.assignedNurse} approved prescription`
+          : `${order.assignedNurse} backlog — pending for ${order.nursePendingDays || 0} day(s)`,
+        tone: order.nurseApprovedAt ? 'sky' : 'amber',
+        icon: 'shield'
+      });
+
+      if (order.nurseApprovedAt && order.sentToPharmacy) {
+        events.push({
+          title: 'Sent to Pharmacy',
+          detail: `${order.sentToPharmacy} — Prescription forwarded to ${order.pharmacy}`,
+          tone: 'sky',
+          icon: 'building'
+        });
+      } else {
+        events.push({
+          title: 'Awaiting Pharmacy Handoff',
+          detail: 'Order cannot be sent to pharmacy before nurse approval.',
+          tone: 'amber',
+          icon: 'building'
+        });
+      }
+
+      if (order.nurseApprovedAt && order.sentToPharmacy) {
+        events.push({
+          title: order.tracking ? 'Agent Detected Tracking Number' : 'Tracking Not Yet Available',
+          detail: order.tracking
+            ? `${audit ? audit.time : 'Recorded'} — Detected ${order.tracking}`
+            : `No tracking after ${order.daysStuck || 0} business day(s)`,
+          tone: order.tracking ? 'emerald' : 'rose',
+          icon: 'radar'
+        });
+
+        events.push({
+          title: order.tracking ? 'Shopify Updated Automatically' : 'Shopify Update Pending',
+          detail: order.tracking ? 'Fulfillment pushed via Shopify API' : 'Waiting for tracking sync',
+          tone: order.tracking ? 'emerald' : 'amber',
+          icon: 'bolt'
+        });
+
+        events.push({
+          title: order.tracking ? 'Customer Notified via Email' : 'Customer Notification Pending',
+          detail: order.tracking ? 'Shopify shipping confirmation sent automatically' : 'Will send after fulfillment push',
+          tone: order.tracking ? 'emerald' : 'amber',
+          icon: 'mail'
+        });
+      }
+
+      timeline.innerHTML = '';
+      function toneStyles(tone) {
+        if (tone === 'emerald') return { dot: 'bg-emerald-500 border-emerald-300', text: 'text-emerald-300' };
+        if (tone === 'rose') return { dot: 'bg-rose-500 border-rose-300', text: 'text-rose-300' };
+        if (tone === 'amber') return { dot: 'bg-amber-500 border-amber-300', text: 'text-amber-300' };
+        return { dot: 'bg-sky-500 border-sky-300', text: 'text-sky-300' };
+      }
+      function iconSvg(icon) {
+        if (icon === 'cart') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`;
+        }
+        if (icon === 'doc') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`;
+        }
+        if (icon === 'shield') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`;
+        }
+        if (icon === 'building') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`;
+        }
+        if (icon === 'radar') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`;
+        }
+        if (icon === 'bolt') {
+          return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`;
+        }
+        return `<svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`;
+      }
+      events.forEach(evt => {
+        const styles = toneStyles(evt.tone);
+        const row = document.createElement('div');
+        row.className = 'relative pl-11';
+        row.innerHTML = `
+          <div class="absolute left-0 top-1.5 w-8 h-8 rounded-full border-2 ${styles.dot} flex items-center justify-center timeline-icon">${iconSvg(evt.icon)}</div>
+          <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
+            <div class="text-sm font-medium ${styles.text}">${evt.title}</div>
+            <div class="text-xs text-slate-400 mt-1">${evt.detail}</div>
+          </div>
+        `;
+        timeline.appendChild(row);
+      });
+
+      document.getElementById('copy-btn').addEventListener('click', () => {
+        if (!order.tracking) {
+          showToast('No tracking to copy');
+          return;
+        }
+        navigator.clipboard.writeText(order.tracking).then(() => showToast('Tracking copied')).catch(() => showToast(order.tracking));
+      });
+    }
+  </script>
+</body>
+</html>

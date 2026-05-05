@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fierce Health — Fulfillment Autopilot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="data.js"></script>
+  <link rel="stylesheet" href="theme.css" />
+  <style>
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+    .pulse-dot { animation: pulse-dot 1.5s ease-in-out infinite; }
+    @keyframes progress-bar {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    .progress-animate { animation: progress-bar 6s linear forwards; }
+    @keyframes slide-in {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slide-out {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
+    .toast-in { animation: slide-in 0.3s ease forwards; }
+    .toast-out { animation: slide-out 0.3s ease forwards; }
+  </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-slate-100">
+
+  <!-- Navbar -->
+  <nav class="bg-slate-900/95 border-b border-slate-800 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-lg backdrop-blur">
+    <a href="index.html" class="flex items-center gap-2">
+      <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+      <span class="font-bold text-lg tracking-tight">Fierce Health</span>
+      <span class="text-slate-400 font-normal text-sm ml-1">— Fulfillment Autopilot</span>
+    </a>
+    <div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium">
+      <a href="index.html" class="text-white border-b-2 border-emerald-400 pb-0.5">Dashboard</a>
+      <a href="audit-log.html" class="text-slate-300 hover:text-white transition-colors">Audit Log</a>
+      <a href="flags.html" class="text-slate-300 hover:text-white transition-colors">Flags</a>
+      <button id="theme-toggle" onclick="toggleTheme()" class="text-xs px-2.5 py-1 rounded border border-slate-700 text-slate-300 hover:text-white">Light</button>
+    </div>
+  </nav>
+
+  <!-- Toast container -->
+  <div id="toast" class="fixed top-6 right-6 z-50 hidden">
+    <div class="bg-green-600 text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 text-sm font-medium">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+      <span id="toast-msg">Agent run complete — 2 orders fulfilled</span>
+    </div>
+  </div>
+
+  <main class="max-w-[1600px] mx-auto px-4 sm:px-6 py-8 space-y-6">
+    <div class="flex flex-col xl:flex-row gap-6">
+      <!-- Primary board -->
+      <section class="flex-1 space-y-6">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white">Fulfillment Ops Board</h1>
+            <p class="text-slate-400 text-sm mt-1">Three-stage workflow board: Intake forms, nurse approved queue, and fulfilled outcomes.</p>
+          </div>
+          <div class="inline-flex items-center gap-2 text-xs bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+            Demo mode - As of <span class="font-mono text-slate-100">2026-05-05 10:30 ET</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <span class="pulse-dot w-3 h-3 bg-emerald-500 rounded-full inline-block flex-shrink-0"></span>
+              <div>
+                <div class="font-semibold text-slate-100">Agent Healthy</div>
+                <div class="text-xs text-slate-400">Last run: <span id="agent-last-run">Today 10:02 AM</span> | Next run: <span id="agent-next-run">Today 2:02 PM</span></div>
+              </div>
+            </div>
+            <button id="run-btn" onclick="runAgent()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-lg flex items-center gap-2 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              Run Agent Now
+            </button>
+          </div>
+          <div id="progress-panel" class="hidden mt-4 border-t border-slate-800 pt-4">
+            <div class="w-full bg-slate-800 rounded-full h-2 mb-3 overflow-hidden">
+              <div id="progress-bar" class="bg-emerald-500 h-2 rounded-full w-0 transition-all duration-300"></div>
+            </div>
+            <div id="progress-steps" class="space-y-1 text-xs text-slate-300 font-mono"></div>
+          </div>
+        </div>
+
+        <div class="pb-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+              <div class="flex items-center justify-between mb-3">
+                <h2 class="text-sm font-semibold text-rose-200">Intake Forms</h2>
+                <span id="lane-intake-count" class="text-xs bg-rose-500 text-white px-2 py-0.5 rounded-full">0</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-2">Shopify purchase -> Form submitted -> Nurse approval needed</p>
+              <div class="text-xs text-rose-300 mb-3">Flagged orders (no nurse approval >3 days) float to top.</div>
+              <div class="flex flex-wrap gap-2 mb-3" id="intake-filters">
+                <button data-lane="intake" data-filter="all" class="lane-filter active-filter text-xs px-2 py-1 rounded-full border border-slate-700 bg-sky-600 text-white">All</button>
+                <button data-lane="intake" data-filter="flagged" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">Flagged</button>
+                <button data-lane="intake" data-filter="pending" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">Pending</button>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="text-[11px] uppercase tracking-wide text-rose-300 mb-2 border-b border-slate-800 pb-1">Flagged · Delayed >3 days</div>
+                  <div id="lane-intake-flagged" class="space-y-3"></div>
+                </div>
+                <div>
+                  <div class="text-[11px] uppercase tracking-wide text-amber-300 mb-2 border-b border-slate-800 pb-1">Pending · Awaiting nurse</div>
+                  <div id="lane-intake-new" class="space-y-3"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+              <div class="flex items-center justify-between mb-3">
+                <h2 class="text-sm font-semibold text-amber-200">Pharmacy Dispatch & Tracking</h2>
+                <span id="lane-approved-count" class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">0</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-2">Nurse approved -> Dispatched to pharmacy -> Tracking SLA watch</p>
+              <div class="text-xs text-amber-300 mb-3">Red: >2 days no tracking, Amber: within SLA, Green: tracking found.</div>
+              <div class="flex flex-wrap gap-2 mb-3" id="approved-filters">
+                <button data-lane="approved" data-filter="all" class="lane-filter active-filter text-xs px-2 py-1 rounded-full border border-slate-700 bg-sky-600 text-white">All time</button>
+                <button data-lane="approved" data-filter="flagged" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">Delayed</button>
+                <button data-lane="approved" data-filter="wellsync" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">WellSync</button>
+                <button data-lane="approved" data-filter="pharmacy hub" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">Pharm Hub</button>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="text-[11px] uppercase tracking-wide text-rose-300 mb-2 border-b border-slate-800 pb-1">Flagged · No tracking >2 days</div>
+                  <div id="lane-approved-flagged" class="space-y-3"></div>
+                </div>
+                <div>
+                  <div class="text-[11px] uppercase tracking-wide text-amber-300 mb-2 border-b border-slate-800 pb-1">In progress · Within SLA</div>
+                  <div id="lane-approved-progress" class="space-y-3"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+              <div class="flex items-center justify-between mb-3">
+                <h2 class="text-sm font-semibold text-emerald-200">Fulfillment</h2>
+                <span id="lane-fulfilled-count" class="text-xs bg-emerald-500 text-white px-2 py-0.5 rounded-full">0</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-2">Only last 2 days fulfilled orders</p>
+              <div class="text-xs text-emerald-300 mb-3">Shows tracking, carrier, email sent time, and sheet write confirmation.</div>
+              <div class="flex flex-wrap gap-2 mb-3" id="fulfilled-filters">
+                <button data-lane="fulfilled" data-filter="today" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">Today</button>
+                <button data-lane="fulfilled" data-filter="ups" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">UPS</button>
+                <button data-lane="fulfilled" data-filter="fedex" class="lane-filter text-xs px-2 py-1 rounded-full border border-slate-700 text-slate-300">FedEx</button>
+                <button data-lane="fulfilled" data-filter="all" class="lane-filter active-filter text-xs px-2 py-1 rounded-full border border-slate-700 bg-sky-600 text-white">All time</button>
+              </div>
+              <div id="lane-fulfilled" class="space-y-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right rail -->
+      <aside class="xl:w-[360px] space-y-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <h3 class="text-sm font-semibold text-slate-100 mb-3">KPI Snapshot</h3>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
+              <div class="text-slate-400 text-xs">Fulfilled</div>
+              <div id="card-fulfilled" class="text-2xl font-semibold text-emerald-300">0</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
+              <div class="text-slate-400 text-xs">Tracking Pushed</div>
+              <div id="card-tracking" class="text-2xl font-semibold text-sky-300">0</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
+              <div class="text-slate-400 text-xs">Pharmacy Breaches</div>
+              <div id="card-delays" class="text-2xl font-semibold text-rose-300">0</div>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-lg p-3">
+              <div class="text-slate-400 text-xs">Nurse Delays</div>
+              <div id="card-nurse" class="text-2xl font-semibold text-amber-300">0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <h3 class="text-sm font-semibold text-slate-100 mb-3">Recent Agent Runs</h3>
+          <div id="runs-list" class="space-y-2"></div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <h3 class="text-sm font-semibold text-slate-100 mb-2">Next Best Actions</h3>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="bg-slate-950 border border-slate-800 rounded-lg p-3">Escalate overdue nurse approvals to assigned NP owners.</li>
+            <li class="bg-slate-950 border border-slate-800 rounded-lg p-3">Monitor approved orders for tracking SLA breaches.</li>
+            <li class="bg-slate-950 border border-slate-800 rounded-lg p-3">Open full flag queue for detailed actions.</li>
+          </ul>
+          <div class="mt-3 flex gap-2">
+            <a href="flags.html" class="text-xs text-sky-400 hover:text-sky-300">Open Flags</a>
+            <span class="text-slate-600">|</span>
+            <a href="audit-log.html" class="text-xs text-sky-400 hover:text-sky-300">Open Audit</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    function applyTheme(theme) {
+      document.body.classList.toggle('light-theme', theme === 'light');
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.textContent = theme === 'light' ? 'Dark' : 'Light';
+    }
+    function initTheme() {
+      applyTheme(localStorage.getItem('fh-theme') || 'dark');
+    }
+    function toggleTheme() {
+      const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+      localStorage.setItem('fh-theme', next);
+      applyTheme(next);
+    }
+    initTheme();
+
+    // Hydrate top-level metrics
+    document.getElementById('card-fulfilled').textContent = DASHBOARD_METRICS.kpis.fulfilledToday;
+    document.getElementById('card-tracking').textContent = DASHBOARD_METRICS.kpis.trackingPushedToday;
+    document.getElementById('card-delays').textContent = DASHBOARD_METRICS.kpis.pharmacyDelaysActive;
+    document.getElementById('card-nurse').textContent = DASHBOARD_METRICS.kpis.nurseApprovalsPending;
+    document.getElementById('agent-last-run').textContent = DASHBOARD_METRICS.agentHealth.lastRun;
+    document.getElementById('agent-next-run').textContent = DASHBOARD_METRICS.agentHealth.nextRun;
+
+    function createCaseCard(order, tone, subtitle, badgeText) {
+      const wrapper = document.createElement('div');
+      const tones = {
+        amber: 'border-amber-900 bg-amber-950/20 text-amber-200',
+        rose: 'border-rose-900 bg-rose-950/20 text-rose-200',
+        sky: 'border-sky-900 bg-sky-950/20 text-sky-200',
+        emerald: 'border-emerald-900 bg-emerald-950/20 text-emerald-200'
+      };
+      wrapper.className = `border rounded-xl p-3 ${tones[tone]}`;
+      wrapper.innerHTML = `
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <div class="text-xs font-semibold text-slate-100">${order.id}</div>
+            <div class="text-xs text-slate-300 mt-0.5">${order.patientInitials} • ${order.product}</div>
+          </div>
+          <span class="text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-slate-300">${order.priority || 'MEDIUM'}</span>
+        </div>
+        <div class="text-[11px] mt-2 text-slate-400">${subtitle}</div>
+        ${badgeText ? `<div class="mt-2"><span class="inline-flex items-center text-[11px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-900">${badgeText}</span></div>` : ''}
+        <div class="mt-2 flex items-center justify-between text-[11px]">
+          <span class="text-slate-500">${order.assignedNurse || order.pharmacy}</span>
+          <span class="flex items-center gap-2">
+            <a href="#" class="text-sky-400 hover:text-sky-300">shopify.com/orders/${order.id.replace('FC-', '')}</a>
+            <a href="order-detail.html?id=${order.id}" class="text-sky-400 hover:text-sky-300">Open</a>
+          </span>
+        </div>
+      `;
+      return wrapper;
+    }
+
+    const laneIntakeFlagged = document.getElementById('lane-intake-flagged');
+    const laneIntakeNew = document.getElementById('lane-intake-new');
+    const laneApprovedFlagged = document.getElementById('lane-approved-flagged');
+    const laneApprovedProgress = document.getElementById('lane-approved-progress');
+    const laneFulfilled = document.getElementById('lane-fulfilled');
+    const filterState = { intake: 'all', approved: 'all', fulfilled: 'all' };
+
+    const intakeCases = ORDERS
+      .filter(o => o.nurseApproved === false)
+      .sort((a, b) => (b.nursePendingDays || 0) - (a.nursePendingDays || 0));
+
+    const approvedCases = ORDERS
+      .filter(o => o.nurseApproved === true && o.status !== 'FULFILLED')
+      .sort((a, b) => (b.daysStuck || 0) - (a.daysStuck || 0));
+
+    function parseAuditTime(value) {
+      const match = value.match(/^(\d{4}-\d{2}-\d{2})\s(\d{1,2}):(\d{2})\s(AM|PM)$/);
+      if (!match) return null;
+      const datePart = match[1];
+      let hour = Number(match[2]);
+      const minute = Number(match[3]);
+      const ampm = match[4];
+      if (ampm === 'PM' && hour !== 12) hour += 12;
+      if (ampm === 'AM' && hour === 12) hour = 0;
+      const hh = String(hour).padStart(2, '0');
+      const mm = String(minute).padStart(2, '0');
+      return new Date(`${datePart}T${hh}:${mm}:00`);
+    }
+
+    const asOf = new Date(APP_CONTEXT.asOf);
+    const fulfilledCases = ORDERS.filter(o => {
+      if (o.status !== 'FULFILLED') return false;
+      const audit = AUDIT_LOG.find(a => a.orderId === o.id);
+      if (!audit) return false;
+      const auditDate = parseAuditTime(audit.time);
+      if (!auditDate || Number.isNaN(auditDate.getTime())) return false;
+      const diffMs = asOf.getTime() - auditDate.getTime();
+      return diffMs >= 0 && diffMs <= (2 * 24 * 60 * 60 * 1000);
+    });
+
+    function filterByPharmacy(items, value) {
+      if (value === 'all' || value === 'flagged' || value === 'today') return items;
+      return items.filter(i => (i.pharmacy || '').toLowerCase() === value);
+    }
+
+    function renderIntake() {
+      laneIntakeFlagged.innerHTML = '';
+      laneIntakeNew.innerHTML = '';
+      let list = intakeCases.slice();
+      const flaggedAll = list.filter(o => (o.nursePendingDays || 0) >= APP_CONTEXT.thresholds.nurseApprovalDays);
+      const pendingAll = list.filter(o => (o.nursePendingDays || 0) < APP_CONTEXT.thresholds.nurseApprovalDays);
+      const flagged = filterState.intake === 'pending' ? [] : flaggedAll;
+      const pending = filterState.intake === 'flagged' ? [] : pendingAll;
+      flagged.forEach(o => laneIntakeFlagged.appendChild(createCaseCard(o, 'rose', 'Awaiting nurse approval', `Intake ${o.nursePendingDays || 0} days — no nurse approval`)));
+      pending.forEach(o => laneIntakeNew.appendChild(createCaseCard(o, 'amber', 'Form submitted, in review queue', `Submitted ${o.nursePendingDays || 0} day(s) ago`)));
+      laneIntakeFlagged.innerHTML = laneIntakeFlagged.innerHTML || '<div class="text-xs text-slate-500">No flagged intake orders.</div>';
+      laneIntakeNew.innerHTML = laneIntakeNew.innerHTML || '<div class="text-xs text-slate-500">No intake orders in this view.</div>';
+      document.getElementById('lane-intake-count').textContent = flagged.length + pending.length;
+    }
+
+    function renderApproved() {
+      laneApprovedFlagged.innerHTML = '';
+      laneApprovedProgress.innerHTML = '';
+      let list = filterByPharmacy(approvedCases, filterState.approved);
+      const flagged = list.filter(o => !o.tracking && (o.daysStuck || 0) >= APP_CONTEXT.thresholds.pharmacyDelayBusinessDays);
+      const inProgress = filterState.approved === 'flagged'
+        ? []
+        : list.filter(o => !((!o.tracking && (o.daysStuck || 0) >= APP_CONTEXT.thresholds.pharmacyDelayBusinessDays)));
+      flagged.forEach(o => laneApprovedFlagged.appendChild(createCaseCard(o, 'rose', 'SLA breached at pharmacy', `At pharmacy ${o.daysStuck || 0} days — no tracking`)));
+      inProgress.forEach(o => {
+        if (o.tracking) {
+          laneApprovedProgress.appendChild(createCaseCard(o, 'emerald', 'Tracking received, pushing to Shopify', 'Tracking received · processing'));
+        } else {
+          laneApprovedProgress.appendChild(createCaseCard(o, 'amber', 'At pharmacy within SLA', `At pharmacy ${o.daysStuck || 0} day(s)`));
+        }
+      });
+      laneApprovedFlagged.innerHTML = laneApprovedFlagged.innerHTML || '<div class="text-xs text-slate-500">No delayed pharmacy orders.</div>';
+      laneApprovedProgress.innerHTML = laneApprovedProgress.innerHTML || '<div class="text-xs text-slate-500">No orders in progress.</div>';
+      document.getElementById('lane-approved-count').textContent = list.length;
+    }
+
+    function renderFulfilled() {
+      laneFulfilled.innerHTML = '';
+      let list = fulfilledCases;
+      if (filterState.fulfilled === 'ups') list = list.filter(o => (o.carrier || '').toLowerCase() === 'ups');
+      if (filterState.fulfilled === 'fedex') list = list.filter(o => (o.carrier || '').toLowerCase() === 'fedex');
+      if (filterState.fulfilled === 'today') {
+        list = list.filter(o => {
+          const audit = AUDIT_LOG.find(a => a.orderId === o.id);
+          return audit && /Today|2026-05-05/.test(audit.time);
+        });
+      }
+      list.forEach(o => {
+      const audit = AUDIT_LOG.find(a => a.orderId === o.id);
+      const card = document.createElement('div');
+      card.className = 'border border-emerald-900 bg-emerald-950/20 rounded-xl p-3';
+      card.innerHTML = `
+        <div class="text-xs font-semibold text-slate-100">${o.id} · ${o.pharmacy}</div>
+        <div class="text-sm text-slate-200 mt-1">${o.patient}</div>
+        <div class="text-xs text-slate-400">${o.product}</div>
+        <div class="mt-2">
+          <span class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-emerald-900/40 text-emerald-300 border border-emerald-900">
+            Fulfilled · ${o.carrier || 'Carrier'} · ${o.tracking || '-'}
+          </span>
+        </div>
+        <div class="text-[11px] text-slate-500 mt-1">Customer email sent: ${audit ? audit.time : 'recorded'}</div>
+        <div class="text-[11px] text-emerald-400 mt-1">Sheet row written</div>
+        <div class="mt-2"><a href="order-detail.html?id=${o.id}" class="text-xs text-sky-400 hover:text-sky-300">Open</a></div>
+      `;
+      laneFulfilled.appendChild(card);
+      });
+      laneFulfilled.innerHTML = laneFulfilled.innerHTML || '<div class="text-xs text-slate-500">No fulfilled orders in this view.</div>';
+      document.getElementById('lane-fulfilled-count').textContent = list.length;
+    }
+
+    function bindFilters() {
+      document.querySelectorAll('.lane-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lane = btn.dataset.lane;
+          const filter = btn.dataset.filter;
+          filterState[lane] = filter;
+          document.querySelectorAll(`.lane-filter[data-lane="${lane}"]`).forEach(el => {
+            el.classList.remove('active-filter', 'bg-sky-600', 'text-white');
+            el.classList.add('text-slate-300');
+          });
+          btn.classList.add('active-filter', 'bg-sky-600', 'text-white');
+          btn.classList.remove('text-slate-300');
+          renderIntake();
+          renderApproved();
+          renderFulfilled();
+        });
+      });
+    }
+
+    bindFilters();
+    renderIntake();
+    renderApproved();
+    renderFulfilled();
+
+    const runsList = document.getElementById('runs-list');
+    AGENT_RUNS.forEach(run => {
+      const item = document.createElement('div');
+      const statusBadge = run.status === 'SUCCESS'
+        ? 'bg-emerald-900/40 text-emerald-300 border-emerald-900'
+        : run.status === 'PARTIAL_SUCCESS'
+          ? 'bg-amber-900/40 text-amber-300 border-amber-900'
+          : 'bg-rose-900/40 text-rose-300 border-rose-900';
+      item.className = 'bg-slate-950 border border-slate-800 rounded-lg p-3';
+      item.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-slate-300">${run.time}</span>
+          <span class="text-[10px] border ${statusBadge} px-2 py-0.5 rounded-full">${run.status.replace('_', ' ')}</span>
+        </div>
+        <div class="text-[11px] text-slate-500 mt-1">Fulfilled ${run.fulfilled} | Flags ${run.flags} | Errors ${run.apiErrors || 0}</div>
+      `;
+      runsList.appendChild(item);
+    });
+
+    // Run agent simulation
+    function runAgent() {
+      const btn = document.getElementById('run-btn');
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+      const panel = document.getElementById('progress-panel');
+      const stepsEl = document.getElementById('progress-steps');
+      const bar = document.getElementById('progress-bar');
+      panel.classList.remove('hidden');
+      stepsEl.innerHTML = '';
+      bar.style.width = '0%';
+
+      const steps = [
+        "Polling WellSync/BoomRx adapter...",
+        "Polling Pharmacy Hub adapter...",
+        "Found 2 new tracking numbers...",
+        "Verifying nurse-approved orders before pharmacy sync...",
+        "Pushing fulfillments to Shopify...",
+        "Updating Google Sheet (Orders To Fill 2026)...",
+        "Run complete: 2 fulfilled, 3 active flags"
+      ];
+
+      steps.forEach((step, i) => {
+        setTimeout(() => {
+          const line = document.createElement('div');
+          const isLast = i === steps.length - 1;
+          line.className = isLast ? 'text-emerald-400 font-semibold' : 'text-slate-400';
+          line.textContent = step;
+          stepsEl.appendChild(line);
+          bar.style.width = `${Math.round(((i + 1) / steps.length) * 100)}%`;
+
+          if (isLast) {
+            setTimeout(() => {
+              document.getElementById('card-fulfilled').textContent = '6';
+              document.getElementById('card-tracking').textContent = '6';
+              showToast('Agent run complete — 2 orders fulfilled');
+              btn.disabled = false;
+              btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }, 600);
+          }
+        }, i * 800);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.remove('hidden');
+      toast.firstElementChild.classList.add('toast-in');
+      setTimeout(() => {
+        toast.firstElementChild.classList.remove('toast-in');
+        toast.firstElementChild.classList.add('toast-out');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.firstElementChild.classList.remove('toast-out');
+        }, 300);
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
