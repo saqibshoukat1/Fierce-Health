@@ -4,6 +4,6 @@ import app from './server.js'
 const port = process.env.PORT || 3000
 
 serve({
-  fetch: app.fetch,
-  port
+    fetch: app.fetch,
+    port
 })
