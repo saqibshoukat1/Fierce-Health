@@ -1,5 +1,5 @@
-import { Hono } from 'hono'
-import { serveStatic } from 'hono/node-server'
+const { Hono } = require('hono')
+const { serveStatic } = require('@hono/node-server/serve-static')
 
 const app = new Hono()
 

@@ -1,5 +1,5 @@
-import { serve } from '@hono/node-server'
-import app from './server.js'
+const { serve } = require('@hono/node-server')
+const app = require('./server.js')
 
 const port = process.env.PORT || 3000
 
